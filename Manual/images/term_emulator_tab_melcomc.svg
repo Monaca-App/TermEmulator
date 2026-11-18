@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="510" viewBox="0 0 880 510">
+  <defs>
+    <filter id="cardShadow" x="-2%" y="-2%" width="104%" height="106%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.14" />
+    </filter>
+    <style>
+      .ui { font-family: 'Yu Gothic UI', 'Meiryo UI', 'Segoe UI', sans-serif; }
+      .mono { font-family: 'Consolas', 'BIZ UDGothic', 'MS Gothic', monospace; }
+      .lbl { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11px; font-weight: 700; fill: #1E293B; }
+      .sub { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 10.5px; fill: #475569; }
+      .inp { fill: #FFFFFF; stroke: #94A3B8; stroke-width: 1.2; rx: 3; }
+      .grp { fill: #FFFFFF; stroke: #CBD5E1; stroke-width: 1.1; rx: 5; }
+      .grp-hdr { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11.5px; font-weight: 700; fill: #1E3A8A; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="880" height="510" fill="#F8FAFC" rx="10" />
+  <text x="24" y="25" class="ui" font-size="13.5" font-weight="700" fill="#0F172A">図 4-3 : [MC 3E] MELSEC MCプロトコル仮想 PLC タブ画面（TermAnalysis.MelcoMC.dll 内蔵 : ucSlaveMelcoMC）</text>
+
+  <!-- ライセンスバッジ -->
+  <rect x="634" y="9" width="222" height="22" rx="11" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1" />
+  <text x="745" y="24" class="ui" font-size="10.2" font-weight="700" fill="#1D4ED8" text-anchor="middle">✓ TermAddIn_MelcoMC.License 有効</text>
+
+  <!-- タブストリップ (MC 3E タブ選択状態) -->
+  <path d="M 28 66 L 28 44 Q 28 40 32 40 L 130 40 Q 134 40 134 44 L 134 66 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="81" y="57" class="ui" font-size="10.5" font-weight="600" fill="#475569" text-anchor="middle">汎用応答ルール</text>
+
+  <path d="M 138 66 L 138 44 Q 138 40 142 40 L 232 40 Q 236 40 236 44 L 236 66 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="187" y="57" class="ui" font-size="10.5" font-weight="600" fill="#475569" text-anchor="middle">周期・シナリオ</text>
+
+  <path d="M 240 66 L 240 44 Q 240 40 244 40 L 320 40 Q 324 40 324 44 L 324 66 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="282" y="57" class="ui" font-size="10.5" font-weight="600" fill="#475569" text-anchor="middle">異常エミュ</text>
+
+  <path d="M 330 66 L 330 44 Q 330 40 334 40 L 416 40 Q 420 40 420 44 L 420 66 Z" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1" />
+  <text x="375" y="57" class="ui" font-size="10.5" font-weight="600" fill="#1E40AF" text-anchor="middle">Modbus</text>
+
+  <path d="M 424 66 L 424 44 Q 424 40 428 40 L 508 40 Q 512 40 512 44 L 512 66 Z" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1" />
+  <text x="468" y="57" class="ui" font-size="10.5" font-weight="600" fill="#1E40AF" text-anchor="middle">MELSEC</text>
+
+  <!-- アクティブタブ: [MC 3E] -->
+  <path d="M 516 67 L 516 39 Q 516 35 520 35 L 606 35 Q 610 35 610 39 L 610 67 Z" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.8" />
+  <text x="563" y="56" class="ui" font-size="11.5" font-weight="700" fill="#1D4ED8" text-anchor="middle">MC 3E</text>
+
+  <path d="M 614 66 L 614 44 Q 614 40 618 40 L 684 40 Q 688 40 688 44 L 688 66 Z" fill="#CCFBF1" stroke="#5EEAD4" stroke-width="1" />
+  <text x="651" y="57" class="ui" font-size="10.5" font-weight="600" fill="#0F766E" text-anchor="middle">Telnet</text>
+
+  <path d="M 692 66 L 692 44 Q 692 40 696 40 L 766 40 Q 770 40 770 44 L 770 66 Z" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1" />
+  <text x="731" y="57" class="ui" font-size="10.2" font-weight="600" fill="#1E40AF" text-anchor="middle">OMRON</text>
+
+  <path d="M 774 66 L 774 44 Q 774 40 778 40 L 848 40 Q 852 40 852 44 L 852 66 Z" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1" />
+  <text x="813" y="57" class="ui" font-size="10.0" font-weight="600" fill="#1E40AF" text-anchor="middle">KEYENCE</text>
+
+  <!-- ucSlaveMelcoMC 本体コンテナ -->
+  <g filter="url(#cardShadow)">
+    <rect x="24" y="66" width="832" height="420" rx="5" fill="#F8FAFC" stroke="#2563EB" stroke-width="1.5" />
+  </g>
+  <line x1="517" y1="66" x2="609" y2="66" stroke="#F8FAFC" stroke-width="2.5" />
+
+  <!-- 上部有効化バー -->
+  <rect x="38" y="80" width="804" height="38" rx="5" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.2" />
+  <rect x="52" y="91" width="16" height="16" rx="3" fill="#2563EB" />
+  <path d="M 55 99 L 58.5 102.5 L 65 95" stroke="#FFFFFF" stroke-width="2" fill="none" />
+  <text x="76" y="104" class="ui" font-size="11.5" font-weight="700" fill="#1E3A8A">このチャネルで 三菱電機 MELSEC MC プロトコル (QnA互換 3E) 仮想 PLC 応答を有効にする</text>
+
+  <rect x="612" y="85" width="218" height="28" rx="4" fill="#1D4ED8" />
+  <text x="721" y="103" class="ui" font-size="10.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">仮想メモリ監視を開く (D/W/R/M/B)</text>
+
+  <!-- ① 3E フレーム交信コード・アクセス経路設定 -->
+  <rect x="38" y="128" width="804" height="124" class="grp" />
+  <text x="52" y="149" class="grp-hdr">① QnA互換 3E フレーム交信コード・アクセス経路（ルーティング）設定</text>
+
+  <text x="52" y="177" class="lbl">交信データコード:</text>
+  <circle cx="168" cy="173" r="6.5" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.6" />
+  <circle cx="168" cy="173" r="3.5" fill="#2563EB" />
+  <text x="180" y="177" class="ui" font-size="11" font-weight="700" fill="#1D4ED8">自動判別 (Binary 50 00 / ASCII &quot;5000&quot;)</text>
+
+  <circle cx="436" cy="173" r="6.5" fill="#FFFFFF" stroke="#64748B" stroke-width="1.4" />
+  <text x="448" y="177" class="ui" font-size="11" fill="#334155">3E Binary 固定</text>
+
+  <circle cx="576" cy="173" r="6.5" fill="#FFFFFF" stroke="#64748B" stroke-width="1.4" />
+  <text x="588" y="177" class="ui" font-size="11" fill="#334155">3E ASCII 固定</text>
+
+  <text x="52" y="210" class="lbl">NW番号 (NetworkNo):</text>
+  <rect x="176" y="193" width="54" height="24" class="inp" />
+  <text x="203" y="209" class="mono" font-size="11.5" font-weight="700" fill="#0F172A" text-anchor="middle">0</text>
+
+  <text x="248" y="210" class="lbl">PC番号 (PcNo):</text>
+  <rect x="342" y="193" width="58" height="24" class="inp" />
+  <text x="371" y="209" class="mono" font-size="11.5" font-weight="700" fill="#0F172A" text-anchor="middle">0xFF</text>
+
+  <text x="418" y="210" class="lbl">要求先ユニットI/O:</text>
+  <rect x="530" y="193" width="66" height="24" class="inp" />
+  <text x="563" y="209" class="mono" font-size="11.5" font-weight="700" fill="#0F172A" text-anchor="middle">03FF</text>
+
+  <text x="614" y="210" class="lbl">要求先局番:</text>
+  <rect x="688" y="193" width="52" height="24" class="inp" />
+  <text x="714" y="209" class="mono" font-size="11.5" font-weight="700" fill="#0F172A" text-anchor="middle">00</text>
+
+  <rect x="52" y="228" width="14" height="14" rx="2" fill="#2563EB" />
+  <path d="M 55 235 L 58 238 L 63 231" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+  <text x="72" y="240" class="ui" font-size="10.8" fill="#1E293B">任意の NW番号・PC番号・I/O番号の要求を自局として受理する</text>
+
+  <text x="468" y="240" class="lbl">模擬 CPU 形名 (0101応答):</text>
+  <rect x="622" y="224" width="148" height="22" class="inp" />
+  <text x="632" y="239" class="mono" font-size="11" fill="#0F172A">Q06UDVCPU</text>
+
+  <!-- ② 対応コマンド・サブコマンド設定 -->
+  <rect x="38" y="262" width="804" height="90" class="grp" />
+  <text x="52" y="283" class="grp-hdr">② 対応 MC コマンド・サブコマンド許可設定（Mc3EFrameEngine / McDeviceParser 共用）</text>
+
+  <g transform="translate(52, 296)">
+    <rect x="0" y="0" width="14" height="14" rx="2" fill="#2563EB" /><path d="M 3 7 L 6 10 L 11 3" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+    <text x="20" y="12" class="mono" font-size="10.8" fill="#0F172A">0401: 一括読出 (Word:0000 / Bit:0001)</text>
+
+    <rect x="292" y="0" width="14" height="14" rx="2" fill="#2563EB" /><path d="M 295 7 L 298 10 L 303 3" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+    <text x="312" y="12" class="mono" font-size="10.8" fill="#0F172A">1401: 一括書込 (Word:0000 / Bit:0001)</text>
+
+    <rect x="584" y="0" width="14" height="14" rx="2" fill="#2563EB" /><path d="M 587 7 L 590 10 L 595 3" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+    <text x="604" y="12" class="mono" font-size="10.8" fill="#0F172A">0619: 折返しテスト</text>
+
+    <rect x="0" y="28" width="14" height="14" rx="2" fill="#2563EB" /><path d="M 3 35 L 6 38 L 11 31" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+    <text x="20" y="40" class="mono" font-size="10.8" fill="#0F172A">0403: ワードランダム読出</text>
+
+    <rect x="292" y="28" width="14" height="14" rx="2" fill="#2563EB" /><path d="M 295 35 L 298 38 L 303 31" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+    <text x="312" y="40" class="mono" font-size="10.8" fill="#0F172A">0101: CPU形名読出応答</text>
+
+    <rect x="584" y="28" width="14" height="14" rx="2" fill="#2563EB" /><path d="M 587 35 L 590 38 L 595 31" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+    <text x="604" y="40" class="ui" font-size="10.8" fill="#0F172A">RUN中書込を許可</text>
+  </g>
+
+  <!-- ③ MC 異常終了コード (EndCode) 模擬 -->
+  <rect x="38" y="362" width="804" height="110" rx="5" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1.2" />
+  <text x="52" y="383" class="ui" font-size="11.5" font-weight="700" fill="#92400E">③ 3E 応答フレーム (D0 00 / &quot;D000&quot;) 終了コード（End Code）異常模擬設定</text>
+
+  <text x="52" y="413" class="lbl">終了コード指定:</text>
+  <rect x="148" y="396" width="384" height="25" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2" rx="3" />
+  <text x="158" y="413" class="ui" font-size="11" font-weight="700" fill="#0F172A">0x0000 : 正常終了（仮想デバイスメモリ読書き応答） ▼</text>
+
+  <text x="548" y="413" class="lbl">発動条件:</text>
+  <rect x="612" y="396" width="212" height="25" class="inp" />
+  <text x="622" y="413" class="ui" font-size="10.8" fill="#334155">常時 / N回周期 / 確率指定 ▼</text>
+
+  <text x="52" y="445" class="sub">選択可能な異常終了コード :  C051 (点数範囲外) / C059 (コマンド誤り) / C05B (デバイス指定誤り) / C05F (実行不可) / 任意 HEX 4桁</text>
+  <text x="52" y="463" class="mono" font-size="10" fill="#64748B">実装配置: Apr/Term/ExtAnalysis/TermAnalysis.MelcoMC/Simulation/ucSlaveMelcoMC.cs (MelcoMc3ESlaveTab : IProtocolSlaveTab)</text>
+</svg>
+

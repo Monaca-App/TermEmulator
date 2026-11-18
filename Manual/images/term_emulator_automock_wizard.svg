@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440">
+  <defs>
+    <filter id="winShadow" x="-3%" y="-3%" width="106%" height="108%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.18" />
+    </filter>
+    <linearGradient id="wizTitle" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4C1D95" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+    <style>
+      .ui { font-family: 'Yu Gothic UI', 'Meiryo UI', 'Segoe UI', sans-serif; }
+      .mono { font-family: 'Consolas', 'BIZ UDGothic', 'MS Gothic', monospace; }
+      .grid-hdr { fill: #F1F5F9; stroke: #CBD5E1; stroke-width: 1; }
+      .grid-hdr-txt { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11px; font-weight: 700; fill: #1E293B; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="440" fill="#F8FAFC" rx="10" />
+  <text x="24" y="26" class="ui" font-size="14" font-weight="700" fill="#0F172A">図 6 : 通信ログからの自動モック生成画面（独立フォーム : AutoMockGeneratorForm）</text>
+
+  <g filter="url(#winShadow)">
+    <rect x="24" y="42" width="912" height="374" rx="8" fill="#F3F4F6" stroke="#94A3B8" stroke-width="1.5" />
+    <path d="M 24 50 Q 24 42 32 42 L 928 42 Q 936 42 936 50 L 936 74 L 24 74 Z" fill="url(#wizTitle)" />
+  </g>
+  <text x="42" y="63" class="ui" font-size="12.5" font-weight="700" fill="#FFFFFF">通信ログ自動モック生成（Capture &amp; Replay）- 実機応答ルール一括抽出</text>
+
+  <!-- 入力ソース選択バー -->
+  <rect x="36" y="84" width="888" height="44" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+  <text x="48" y="111" class="ui" font-size="11.5" font-weight="700" fill="#1E293B">入力ログ元:</text>
+  <rect x="128" y="93" width="332" height="26" rx="3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.2" />
+  <text x="138" y="110" class="ui" font-size="11" font-weight="700" fill="#5B21B6">透過Proxyモニター履歴 [E3] または 外部CSV/TeraTermログ ▼</text>
+
+  <text x="476" y="111" class="ui" font-size="11" font-weight="700" fill="#1E293B">ペア判定上限:</text>
+  <rect x="560" y="93" width="76" height="26" rx="3" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2" />
+  <text x="572" y="110" class="mono" font-size="11.5" fill="#0F172A">1000 ms</text>
+
+  <rect x="650" y="93" width="132" height="26" rx="3" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2" />
+  <text x="716" y="110" class="ui" font-size="11" font-weight="600" fill="#0F172A" text-anchor="middle">重複要求を統合 ✓</text>
+
+  <rect x="794" y="92" width="118" height="28" rx="4" fill="#7C3AED" />
+  <text x="853" y="110" class="ui" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">ペア自動解析実行</text>
+
+  <!-- 抽出結果プレビューテーブル -->
+  <g transform="translate(36, 138)">
+    <rect x="0" y="0" width="888" height="206" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" />
+    <rect x="0" y="0" width="44" height="26" class="grid-hdr" />
+    <rect x="44" y="0" width="90" height="26" class="grid-hdr" />
+    <rect x="134" y="0" width="276" height="26" class="grid-hdr" />
+    <rect x="410" y="0" width="322" height="26" class="grid-hdr" />
+    <rect x="732" y="0" width="78" height="26" class="grid-hdr" />
+    <rect x="810" y="0" width="78" height="26" class="grid-hdr" />
+
+    <text x="10" y="17" class="grid-hdr-txt">採用</text>
+    <text x="54" y="17" class="grid-hdr-txt">推論種別</text>
+    <text x="144" y="17" class="grid-hdr-txt">抽出された要求 (TX -&gt; 実機)</text>
+    <text x="420" y="17" class="grid-hdr-txt">抽出された実機応答 (実機 -&gt; RX)</text>
+    <text x="740" y="17" class="grid-hdr-txt">実測遅延</text>
+    <text x="820" y="17" class="grid-hdr-txt">出現回数</text>
+
+    <!-- Row 1 -->
+    <g transform="translate(0, 26)">
+      <rect x="0" y="0" width="888" height="34" fill="#F0FDFA" stroke="#CCFBF1" stroke-width="1" />
+      <text x="16" y="21" class="mono" font-size="12" fill="#15803D" font-weight="700">✓</text>
+      <text x="54" y="21" class="mono" font-size="11" fill="#0F766E" font-weight="700">ExactText</text>
+      <text x="144" y="21" class="mono" font-size="11" fill="#0F172A">*IDN?\r\n</text>
+      <text x="420" y="21" class="mono" font-size="11" fill="#0F766E" font-weight="700">KEITHLEY,MODEL 2000,0912345,A20\r\n</text>
+      <text x="748" y="21" class="mono" font-size="11" fill="#334155">5 ms</text>
+      <text x="836" y="21" class="mono" font-size="11" fill="#334155">1 回</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(0, 60)">
+      <rect x="0" y="0" width="888" height="34" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+      <text x="16" y="21" class="mono" font-size="12" fill="#15803D" font-weight="700">✓</text>
+      <text x="54" y="21" class="mono" font-size="11" fill="#0F766E" font-weight="700">ExactText</text>
+      <text x="144" y="21" class="mono" font-size="11" fill="#0F172A">\x0500FFWR0D010002</text>
+      <text x="420" y="21" class="mono" font-size="11" fill="#0F172A">\x0200FF04D205DC\x03</text>
+      <text x="748" y="21" class="mono" font-size="11" fill="#334155">8 ms</text>
+      <text x="832" y="21" class="mono" font-size="11" fill="#334155">42 回</text>
+    </g>
+
+    <!-- Row 3 -->
+    <g transform="translate(0, 94)">
+      <rect x="0" y="0" width="888" height="34" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+      <text x="16" y="21" class="mono" font-size="12" fill="#15803D" font-weight="700">✓</text>
+      <text x="54" y="21" class="mono" font-size="11" fill="#6D28D9" font-weight="700">HexExact</text>
+      <text x="144" y="21" class="mono" font-size="11" fill="#0F172A">50 00 00 FF FF 03 00 0C 00 10 00 01 04 ...</text>
+      <text x="420" y="21" class="mono" font-size="11" fill="#6D28D9">D0 00 00 FF FF 03 00 06 00 00 00 D2 04 ...</text>
+      <text x="744" y="21" class="mono" font-size="11" fill="#334155">12 ms</text>
+      <text x="832" y="21" class="mono" font-size="11" fill="#334155">15 回</text>
+    </g>
+  </g>
+
+  <text x="42" y="378" class="ui" font-size="11" font-weight="600" fill="#475569">実機がある現場で数分間プロキシ記録するだけで、オフライン環境用の仮想モックチャネルを即座に自動生成できます。</text>
+
+  <rect x="616" y="360" width="194" height="34" rx="4" fill="#0D9488" />
+  <text x="713" y="382" class="ui" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">新規モックチャネルとして登録</text>
+
+  <rect x="820" y="360" width="104" height="34" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2" />
+  <text x="872" y="382" class="ui" font-size="11.5" font-weight="600" fill="#1E293B" text-anchor="middle">キャンセル</text>
+</svg>
+

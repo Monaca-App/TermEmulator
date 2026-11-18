@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="590" viewBox="0 0 980 590">
+  <defs>
+    <filter id="dlgShadow" x="-3%" y="-3%" width="108%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.18" />
+    </filter>
+    <linearGradient id="dlgTitle" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0F766E" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <linearGradient id="proxyTitle" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4C1D95" />
+      <stop offset="100%" stop-color="#6D28D9" />
+    </linearGradient>
+    <style>
+      .ui { font-family: 'Yu Gothic UI', 'Meiryo UI', 'Segoe UI', sans-serif; }
+      .mono { font-family: 'Consolas', 'BIZ UDGothic', 'MS Gothic', monospace; }
+      .badge-circle { fill: #E8590C; stroke: #FFFFFF; stroke-width: 2; }
+      .badge-num { font-family: 'Segoe UI', 'Yu Gothic UI', sans-serif; font-size: 12px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; dominant-baseline: central; }
+      .lbl { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11px; font-weight: 600; fill: #1E293B; }
+      .input-box { fill: #FFFFFF; stroke: #94A3B8; stroke-width: 1.2; rx: 3; }
+      .grid-hdr { fill: #F1F5F9; stroke: #CBD5E1; stroke-width: 1; }
+      .grid-hdr-txt { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11px; font-weight: 700; fill: #1E293B; }
+    </style>
+  </defs>
+
+  <!-- 背景 -->
+  <rect x="0" y="0" width="980" height="590" fill="#F8FAFC" rx="10" />
+  <text x="24" y="26" class="ui" font-size="14" font-weight="700" fill="#0F172A">図 4 : チャネル設定画面（基本3タブ ＋ ライセンス連動プロトコル別動的タブ ＋ 透過Proxy : EmulatorChannelDialog）</text>
+
+  <!-- 左側メイン: EmulatorChannelDialog -->
+  <g filter="url(#dlgShadow)">
+    <rect x="20" y="42" width="606" height="526" rx="7" fill="#F3F4F6" stroke="#94A3B8" stroke-width="1.5" />
+    <path d="M 20 49 Q 20 42 27 42 L 619 42 Q 626 42 626 49 L 626 74 L 20 74 Z" fill="url(#dlgTitle)" />
+  </g>
+  <text x="36" y="63" class="ui" font-size="12.5" font-weight="700" fill="#FFFFFF">TermEmulator チャネル設定 - [E0: SCPI マルチメータ＆天秤] (可変サイズ・座標保存対応)</text>
+
+  <!-- 上部共通ヘッダ設定 -->
+  <rect x="32" y="84" width="582" height="82" rx="5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+  <text x="44" y="106" class="lbl">チャネル名称:</text>
+  <rect x="122" y="91" width="166" height="24" class="input-box" />
+  <text x="130" y="107" class="ui" font-size="11" font-weight="700" fill="#0F172A">SCPI マルチメータ</text>
+
+  <text x="298" y="106" class="lbl">接続方式:</text>
+  <rect x="356" y="91" width="246" height="24" fill="#F0FDFA" stroke="#0D9488" stroke-width="1.3" rx="3" />
+  <text x="364" y="107" class="mono" font-size="10.5" font-weight="700" fill="#0F766E">OS標準COM / NamedPipe / TCP ▼</text>
+
+  <text x="44" y="142" class="lbl">エンドポイント:</text>
+  <rect x="122" y="127" width="166" height="24" class="input-box" />
+  <text x="130" y="143" class="mono" font-size="11" fill="#0F172A">COM3:9600,8,N,1</text>
+
+  <text x="298" y="142" class="lbl">終端:</text>
+  <rect x="332" y="127" width="94" height="24" class="input-box" />
+  <text x="340" y="143" class="mono" font-size="11" fill="#0F172A">CRLF (\r\n)</text>
+
+  <!-- プリセットテンプレート即時適用ボタン -->
+  <rect x="436" y="125" width="166" height="28" rx="4" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.3" />
+  <text x="519" y="143" class="ui" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">標準プリセット読込 ▼</text>
+
+  <!-- ① 基本3タブ ＋ ライセンス有効プロトコル別動的タブ -->
+  <circle cx="38" cy="186" r="10" class="badge-circle" />
+  <text x="38" y="186" class="badge-num">1</text>
+
+  <!-- 基本タブ1 (選択中) -->
+  <path d="M 52 204 L 52 180 Q 52 176 56 176 L 136 176 Q 140 176 140 180 L 140 204 Z" fill="#FFFFFF" stroke="#0D9488" stroke-width="1.5" />
+  <text x="96" y="194" class="ui" font-size="9.5" font-weight="700" fill="#0F766E" text-anchor="middle">汎用応答ルール</text>
+
+  <!-- 基本タブ2 -->
+  <path d="M 142 204 L 142 182 Q 142 178 146 178 L 216 178 Q 220 178 220 182 L 220 204 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="181" y="194" class="ui" font-size="9.3" font-weight="600" fill="#475569" text-anchor="middle">周期・シナリオ</text>
+
+  <!-- 基本タブ3 -->
+  <path d="M 222 204 L 222 182 Q 222 178 226 178 L 284 178 Q 288 178 288 182 L 288 204 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="255" y="194" class="ui" font-size="9.3" font-weight="600" fill="#475569" text-anchor="middle">異常エミュ</text>
+
+  <!-- 産業プロトコル別動的タブ群 (ライセンス有効分のみ表示: 全6種) -->
+  <path d="M 290 204 L 290 181 Q 290 177 294 177 L 340 177 Q 344 177 344 181 L 344 204 Z" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.2" />
+  <text x="317" y="194" class="ui" font-size="9.2" font-weight="700" fill="#1D4ED8" text-anchor="middle">Modbus</text>
+
+  <path d="M 346 204 L 346 181 Q 346 177 350 177 L 396 177 Q 400 177 400 181 L 400 204 Z" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.2" />
+  <text x="373" y="194" class="ui" font-size="9.2" font-weight="700" fill="#1D4ED8" text-anchor="middle">MELSEC</text>
+
+  <path d="M 402 204 L 402 181 Q 402 177 406 177 L 448 177 Q 452 177 452 181 L 452 204 Z" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.2" />
+  <text x="427" y="194" class="ui" font-size="9.2" font-weight="700" fill="#1D4ED8" text-anchor="middle">MC 3E</text>
+
+  <path d="M 454 204 L 454 181 Q 454 177 458 177 L 498 177 Q 502 177 502 181 L 502 204 Z" fill="#CCFBF1" stroke="#0D9488" stroke-width="1.2" />
+  <text x="478" y="194" class="ui" font-size="9.2" font-weight="700" fill="#0F766E" text-anchor="middle">Telnet</text>
+
+  <path d="M 504 204 L 504 181 Q 504 177 508 177 L 554 177 Q 558 177 558 181 L 558 204 Z" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.2" />
+  <text x="531" y="194" class="ui" font-size="9.2" font-weight="700" fill="#1D4ED8" text-anchor="middle">OMRON</text>
+
+  <path d="M 560 204 L 560 181 Q 560 177 564 177 L 610 177 Q 614 177 614 181 L 614 204 Z" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.2" />
+  <text x="587" y="194" class="ui" font-size="9.0" font-weight="700" fill="#1D4ED8" text-anchor="middle">KEYENCE</text>
+
+  <!-- サブタブコンテナ -->
+  <rect x="32" y="203" width="582" height="304" rx="3" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" />
+  <line x1="53" y1="203" x2="139" y2="203" stroke="#FFFFFF" stroke-width="2" />
+
+  <!-- ルール編集ツールバー -->
+  <rect x="44" y="214" width="78" height="24" rx="3" fill="#F0FDFA" stroke="#0D9488" stroke-width="1" />
+  <text x="83" y="230" class="ui" font-size="11" font-weight="700" fill="#0F766E" text-anchor="middle">＋ ルール追加</text>
+  <rect x="128" y="214" width="148" height="24" rx="3" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1" />
+  <text x="202" y="230" class="ui" font-size="10.5" font-weight="700" fill="#92400E" text-anchor="middle">プリセット: SCPI / 天秤 / AT / GPS</text>
+
+  <rect x="438" y="214" width="80" height="24" rx="3" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" />
+  <text x="478" y="230" class="ui" font-size="11" font-weight="600" fill="#1E293B" text-anchor="middle">CSV読込</text>
+  <rect x="524" y="214" width="78" height="24" rx="3" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" />
+  <text x="563" y="230" class="ui" font-size="11" font-weight="600" fill="#1E293B" text-anchor="middle">CSV出力</text>
+
+  <!-- ルールグリッド -->
+  <g transform="translate(44, 246)">
+    <rect x="0" y="0" width="558" height="168" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" />
+    <rect x="0" y="0" width="38" height="26" class="grid-hdr" />
+    <rect x="38" y="0" width="92" height="26" class="grid-hdr" />
+    <rect x="130" y="0" width="142" height="26" class="grid-hdr" />
+    <rect x="272" y="0" width="224" height="26" class="grid-hdr" />
+    <rect x="496" y="0" width="62" height="26" class="grid-hdr" />
+
+    <text x="8" y="17" class="grid-hdr-txt">有効</text>
+    <text x="45" y="17" class="grid-hdr-txt">一致種別</text>
+    <text x="138" y="17" class="grid-hdr-txt">受信パターン</text>
+    <text x="280" y="17" class="grid-hdr-txt">応答テンプレート (マクロ・チェックサム可)</text>
+    <text x="504" y="17" class="grid-hdr-txt">遅延ms</text>
+
+    <!-- Rule 1: SCPI -->
+    <g transform="translate(0, 26)">
+      <rect x="0" y="0" width="558" height="34" fill="#F0FDFA" stroke="#CCFBF1" stroke-width="1" />
+      <text x="13" y="21" class="mono" font-size="11.5" fill="#15803D" font-weight="700">✓</text>
+      <text x="45" y="21" class="mono" font-size="11" fill="#0F766E" font-weight="700">ExactText</text>
+      <text x="138" y="21" class="mono" font-size="11.5" fill="#0F172A" font-weight="700">*IDN?</text>
+      <text x="280" y="21" class="mono" font-size="11" fill="#0F172A">MONACA,EMU-DMM,$SEQ:D4$,1.0\r\n</text>
+      <text x="516" y="21" class="mono" font-size="11.5" fill="#334155">5</text>
+    </g>
+    <!-- Rule 2: 電子天秤 Q -->
+    <g transform="translate(0, 60)">
+      <rect x="0" y="0" width="558" height="34" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+      <text x="13" y="21" class="mono" font-size="11.5" fill="#15803D" font-weight="700">✓</text>
+      <text x="45" y="21" class="mono" font-size="11" fill="#0F766E">ExactText</text>
+      <text x="138" y="21" class="mono" font-size="11.5" fill="#0F172A">Q</text>
+      <text x="280" y="21" class="mono" font-size="11" fill="#0F172A">ST,+$RANDF(12.30,12.38,2)$ g\r\n</text>
+      <text x="512" y="21" class="mono" font-size="11.5" fill="#334155">20</text>
+    </g>
+    <!-- Rule 3: NMEA / XOR Checksum -->
+    <g transform="translate(0, 94)">
+      <rect x="0" y="0" width="558" height="34" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+      <text x="13" y="21" class="mono" font-size="11.5" fill="#15803D" font-weight="700">✓</text>
+      <text x="45" y="21" class="mono" font-size="11" fill="#1D4ED8">RegexText</text>
+      <text x="138" y="21" class="mono" font-size="11" fill="#0F172A">^MEAS:CH(\d)\?$</text>
+      <text x="280" y="21" class="mono" font-size="11" fill="#0F172A">CH$CAP1$=+$RANDF(4.98,5.02,4)$V\r\n</text>
+      <text x="512" y="21" class="mono" font-size="11.5" fill="#334155">15</text>
+    </g>
+    <!-- Rule 4: HexWildcard -->
+    <g transform="translate(0, 128)">
+      <rect x="0" y="0" width="558" height="34" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+      <text x="13" y="21" class="mono" font-size="11.5" fill="#15803D" font-weight="700">✓</text>
+      <text x="45" y="21" class="mono" font-size="11" fill="#6D28D9">HexWildcard</text>
+      <text x="138" y="21" class="mono" font-size="11" fill="#0F172A">02 30 31 ?? 03</text>
+      <text x="280" y="21" class="mono" font-size="11" fill="#6D28D9">[HEX] 06 30 31 4F 4B 03 $CRC16$</text>
+      <text x="512" y="21" class="mono" font-size="11.5" fill="#334155">10</text>
+    </g>
+  </g>
+
+  <!-- ② テスト照合プレビューバー -->
+  <circle cx="54" cy="434" r="10" class="badge-circle" />
+  <text x="54" y="434" class="badge-num">2</text>
+  <rect x="44" y="450" width="558" height="44" rx="4" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" />
+  <text x="54" y="476" class="lbl">模擬受信テスト:</text>
+  <rect x="148" y="459" width="144" height="26" class="input-box" />
+  <text x="156" y="476" class="mono" font-size="11.5" fill="#0F172A">MEAS:CH2?</text>
+  <rect x="298" y="459" width="58" height="26" rx="3" fill="#0D9488" />
+  <text x="327" y="476" class="ui" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">照合</text>
+  <text x="366" y="476" class="mono" font-size="11.5" fill="#0F766E" font-weight="700">-&gt; CH2=+5.0031V\r\n</text>
+
+  <!-- ダイアログ下部ボタン ＆ 位置保存注記 -->
+  <text x="40" y="540" class="mono" font-size="9.8" fill="#475569">Point Key="EmulatorChannelDialog" (X,Y,W,H,DPI)</text>
+  <rect x="408" y="520" width="96" height="32" rx="4" fill="#0D9488" stroke="#0F766E" stroke-width="1.2" />
+  <text x="456" y="541" class="ui" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">保存 (OK)</text>
+  <rect x="514" y="520" width="96" height="32" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2" />
+  <text x="562" y="541" class="ui" font-size="12" font-weight="600" fill="#1E293B" text-anchor="middle">キャンセル</text>
+
+  <!-- 右上カード: プロトコル別タブ画面管理＆ライセンス表示制御 -->
+  <rect x="646" y="42" width="314" height="252" rx="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.4" />
+  <rect x="646" y="42" width="314" height="32" rx="7" fill="#EFF6FF" />
+  <text x="660" y="63" class="ui" font-size="11.8" font-weight="700" fill="#1E3A8A">③ プロトコル別タブ管理 ＆ ライセンス表示制御</text>
+
+  <text x="660" y="92" class="lbl">各 ExtAnalysis DLL の専用タブ (ライセンス有効時のみ表示):</text>
+  <rect x="660" y="99" width="286" height="133" rx="5" fill="#F8FAFC" stroke="#93C5FD" stroke-width="1.2" />
+  <text x="668" y="115" class="ui" font-size="9.7" font-weight="700" fill="#1D4ED8">・[Modbus]  (ucSlaveModbus)  : TermAddIn_Modbus</text>
+  <text x="668" y="131" class="ui" font-size="9.7" font-weight="700" fill="#1D4ED8">・[MELSEC]  (ucSlaveMelco)   : TermAddIn_Melco</text>
+  <text x="668" y="147" class="ui" font-size="9.7" font-weight="700" fill="#1D4ED8">・[MC 3E]   (ucSlaveMelcoMC) : TermAddIn_MelcoMC</text>
+  <text x="668" y="163" class="ui" font-size="9.7" font-weight="700" fill="#0F766E">・[Telnet]  (ucSlaveTelnet)  : TermAddIn_Telnet</text>
+  <text x="668" y="179" class="ui" font-size="9.7" font-weight="700" fill="#1D4ED8">・[OMRON]   (ucSlaveOmron)   : TermAddIn_Omron</text>
+  <text x="668" y="195" class="ui" font-size="9.7" font-weight="700" fill="#1D4ED8">・[KEYENCE] (ucSlaveKeyence) : TermAddIn_Keyence</text>
+  <line x1="668" y1="204" x2="938" y2="204" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3,2" />
+  <text x="668" y="220" class="ui" font-size="9.4" font-weight="700" fill="#B45309">・ライセンス未所持(評価期間外)/DLL未配置タブは自動非表示</text>
+
+  <rect x="660" y="238" width="286" height="44" rx="5" fill="#F0FDF4" stroke="#22C55E" stroke-width="1.2" />
+  <text x="670" y="255" class="ui" font-size="10.2" font-weight="700" fill="#15803D">✓ TermPropertiesForm 準拠の動的タブ可視性制御</text>
+  <text x="670" y="273" class="ui" font-size="9.8" fill="#166534">IsExtensionLicensed == true (評価期間内含む) のタブのみ表示</text>
+
+  <!-- 右下カード: 透過プロキシ＆シリアル⇔TCP変換ブリッジ -->
+  <g filter="url(#dlgShadow)">
+    <rect x="646" y="310" width="314" height="258" rx="7" fill="#F3F4F6" stroke="#94A3B8" stroke-width="1.4" />
+    <path d="M 646 317 Q 646 310 653 310 L 953 310 Q 960 310 960 317 L 960 340 L 646 340 Z" fill="url(#proxyTitle)" />
+  </g>
+  <text x="660" y="330" class="ui" font-size="12" font-weight="700" fill="#FFFFFF">④ 透過プロキシ ＆ シリアル⇔TCP 変換ブリッジ</text>
+
+  <text x="660" y="364" class="lbl">プロキシ形態:</text>
+  <rect x="748" y="348" width="198" height="24" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.3" rx="3" />
+  <text x="756" y="364" class="ui" font-size="10.5" fill="#5B21B6" font-weight="700">Serial⇔TCP / TCP⇔TCP / COM⇔COM</text>
+
+  <text x="660" y="396" class="lbl">上位待受側 A:</text>
+  <rect x="748" y="380" width="198" height="24" class="input-box" />
+  <text x="756" y="396" class="mono" font-size="11" fill="#0F172A">TCP 0.0.0.0:4001</text>
+
+  <text x="660" y="428" class="lbl">下位実機側 B:</text>
+  <rect x="748" y="412" width="198" height="24" class="input-box" />
+  <text x="756" y="428" class="mono" font-size="11" fill="#0F172A">COM3:115200,8,N,1</text>
+
+  <rect x="656" y="446" width="294" height="66" rx="5" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1.6" />
+  <circle cx="672" cy="463" r="9" class="badge-circle" />
+  <text x="672" y="463" class="badge-num">4</text>
+  <text x="687" y="467" class="ui" font-size="11" font-weight="700" fill="#92400E">インライン機能（実機前段デバッグ）:</text>
+  <text x="668" y="487" class="ui" font-size="10.5" font-weight="700" fill="#B45309">・異常注入 (遅延/分割/Drop/CRC破壊)</text>
+  <text x="668" y="504" class="ui" font-size="10.5" font-weight="700" fill="#5B21B6">・往復パケット記録 -&gt; 自動モックルール化</text>
+
+  <text x="660" y="536" class="ui" font-size="10.5" fill="#334155">物理シリアル機器の LAN 公開（デバイスサーバー化）と</text>
+  <text x="660" y="552" class="ui" font-size="10.5" fill="#334155">スニファ監視・異常系テスト・自動モック抽出を同時実現</text>
+</svg>

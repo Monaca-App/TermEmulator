@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="450" viewBox="0 0 900 450">
+  <defs>
+    <filter id="winShadow" x="-3%" y="-3%" width="106%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.18" />
+    </filter>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0F766E" />
+      <stop offset="60%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#1E3A8A" />
+    </linearGradient>
+    <style>
+      .ui { font-family: 'Yu Gothic UI', 'Meiryo UI', 'Segoe UI', sans-serif; }
+      .mono { font-family: 'Consolas', 'BIZ UDGothic', 'MS Gothic', monospace; }
+      .badge-circle { fill: #E8590C; stroke: #FFFFFF; stroke-width: 2; }
+      .badge-num { font-family: 'Segoe UI', 'Yu Gothic UI', sans-serif; font-size: 12px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; dominant-baseline: central; }
+      .btn-box { fill: #FFFFFF; stroke: #CBD5E1; stroke-width: 1.1; rx: 4; }
+      .btn-txt { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11px; font-weight: 600; fill: #1E293B; }
+      .grid-hdr { fill: #F1F5F9; stroke: #CBD5E1; stroke-width: 1; }
+      .grid-hdr-txt { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11px; font-weight: 700; fill: #1E293B; }
+    </style>
+  </defs>
+
+  <!-- 背景キャンバス -->
+  <rect x="0" y="0" width="900" height="450" fill="#F8FAFC" rx="10" />
+  <text x="24" y="25" class="ui" font-size="14" font-weight="700" fill="#0F172A">図 1 : メイン画面（チャネル稼働管理 ＆ 各機能独立ウィンドウ起動ダッシュボード）</text>
+
+  <!-- メインウィンドウ外枠 (すっきりしたコンパクト設計) -->
+  <g filter="url(#winShadow)">
+    <rect x="24" y="38" width="852" height="390" rx="8" fill="#F3F4F6" stroke="#94A3B8" stroke-width="1.5" />
+    <path d="M 24 46 Q 24 38 32 38 L 868 38 Q 876 38 876 46 L 876 70 L 24 70 Z" fill="url(#titleGrad)" />
+  </g>
+
+  <!-- タイトルバー -->
+  <rect x="36" y="46" width="16" height="16" rx="3" fill="#CCFBF1" stroke="#FFFFFF" stroke-width="1.2" />
+  <text x="44" y="58" class="mono" font-size="10" font-weight="700" fill="#0F766E" text-anchor="middle">TE</text>
+  <text x="60" y="59" class="ui" font-size="12.5" font-weight="700" fill="#FFFFFF">Monaca TermEmulator (v1.0.0)</text>
+
+  <!-- ライセンス状態ピル -->
+  <rect x="614" y="44" width="154" height="20" rx="10" fill="#DCFCE7" stroke="#86EFAC" stroke-width="1" />
+  <text x="691" y="58" class="ui" font-size="10.5" font-weight="700" fill="#166534" text-anchor="middle">✓ TermEmulator.License</text>
+
+  <!-- 最小化・最大化・閉じるボタン -->
+  <g stroke="#E2E8F0" stroke-width="1.4" fill="none">
+    <line x1="790" y1="55" x2="802" y2="55" />
+    <rect x="818" y="48" width="12" height="11" />
+    <line x1="846" y1="48" x2="858" y2="60" />
+    <line x1="858" y1="48" x2="846" y2="60" />
+  </g>
+
+  <!-- 標準メニューバー -->
+  <rect x="25" y="70" width="850" height="24" fill="#F8FAFC" />
+  <line x1="25" y1="94" x2="875" y2="94" stroke="#E2E8F0" stroke-width="1" />
+  <text x="38" y="86" class="ui" font-size="11" fill="#334155">ファイル(F)</text>
+  <text x="108" y="86" class="ui" font-size="11" fill="#334155">チャネル(C)</text>
+  <text x="180" y="86" class="ui" font-size="11" fill="#334155">ツール(T)</text>
+  <text x="244" y="86" class="ui" font-size="11" font-weight="700" fill="#0F766E">設定(S)</text>
+  <text x="302" y="86" class="ui" font-size="11" font-weight="700" fill="#0F766E">ヘルプ(H)</text>
+  <text x="480" y="86" class="ui" font-size="10" fill="#64748B">※ 環境設定（言語切替）・エラー履歴・操作説明書・バージョン情報を完備</text>
+
+  <!-- ① ツールバー: 左=チャネル操作 / 右=独立機能ウィンドウ起動ボタン -->
+  <rect x="25" y="94" width="850" height="42" fill="#FFFFFF" />
+  <line x1="25" y1="136" x2="875" y2="136" stroke="#CBD5E1" stroke-width="1" />
+
+  <circle cx="40" cy="115" r="9" class="badge-circle" />
+  <text x="40" y="115" class="badge-num">1</text>
+
+  <rect x="55" y="101" width="90" height="28" rx="4" fill="#0D9488" stroke="#0F766E" stroke-width="1" />
+  <polygon points="65,109 65,121 74,115" fill="#FFFFFF" />
+  <text x="80" y="119" class="ui" font-size="11" font-weight="700" fill="#FFFFFF">全開始</text>
+
+  <rect x="151" y="101" width="76" height="28" rx="4" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1" />
+  <rect x="163" y="110" width="9" height="9" fill="#DC2626" />
+  <text x="178" y="119" class="btn-txt">全停止</text>
+
+  <line x1="236" y1="103" x2="236" y2="127" stroke="#CBD5E1" stroke-width="1.2" />
+
+  <rect x="245" y="101" width="62" height="28" class="btn-box" />
+  <text x="276" y="119" class="btn-txt" text-anchor="middle">＋ 追加</text>
+
+  <rect x="313" y="101" width="62" height="28" class="btn-box" />
+  <text x="344" y="119" class="btn-txt" text-anchor="middle">✎ 設定</text>
+
+  <rect x="381" y="101" width="56" height="28" class="btn-box" />
+  <text x="409" y="119" class="btn-txt" text-anchor="middle">削除</text>
+
+  <line x1="448" y1="103" x2="448" y2="127" stroke="#94A3B8" stroke-width="1.4" />
+
+  <!-- ② 独立機能ウィンドウ起動ランチャー群 -->
+  <circle cx="464" cy="115" r="9" class="badge-circle" />
+  <text x="464" y="115" class="badge-num">2</text>
+
+  <rect x="479" y="101" width="94" height="28" rx="4" fill="#F0FDFA" stroke="#0D9488" stroke-width="1.3" />
+  <text x="526" y="119" class="ui" font-size="11" font-weight="700" fill="#0F766E" text-anchor="middle">通信モニター</text>
+
+  <rect x="579" y="101" width="94" height="28" rx="4" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.3" />
+  <text x="626" y="119" class="ui" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">対話コンソール</text>
+
+  <rect x="679" y="101" width="90" height="28" rx="4" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.2" />
+  <text x="724" y="119" class="ui" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">メモリ監視</text>
+
+  <rect x="775" y="101" width="90" height="28" rx="4" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.2" />
+  <text x="820" y="119" class="ui" font-size="11" font-weight="700" fill="#5B21B6" text-anchor="middle">自動モック</text>
+
+  <!-- チャネル一覧グリッド (メイン画面はチャネル管理だけに集中) -->
+  <g transform="translate(36, 148)">
+    <rect x="0" y="0" width="828" height="236" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.1" />
+    <rect x="0" y="0" width="42" height="28" class="grid-hdr" />
+    <rect x="42" y="0" width="46" height="28" class="grid-hdr" />
+    <rect x="88" y="0" width="176" height="28" class="grid-hdr" />
+    <rect x="264" y="0" width="212" height="28" class="grid-hdr" />
+    <rect x="476" y="0" width="194" height="28" class="grid-hdr" />
+    <rect x="670" y="0" width="82" height="28" class="grid-hdr" />
+    <rect x="752" y="0" width="76" height="28" class="grid-hdr" />
+
+    <text x="12" y="18" class="grid-hdr-txt">ID</text>
+    <text x="52" y="18" class="grid-hdr-txt">有効</text>
+    <text x="98" y="18" class="grid-hdr-txt">チャネル名称</text>
+    <text x="274" y="18" class="grid-hdr-txt">接続方式 / エンドポイント</text>
+    <text x="486" y="18" class="grid-hdr-txt">動作構成 (ルール / スレーブ)</text>
+    <text x="682" y="18" class="grid-hdr-txt">状態</text>
+    <text x="762" y="18" class="grid-hdr-txt">RX / TX</text>
+
+    <!-- Row E0 -->
+    <g transform="translate(0, 28)">
+      <rect x="0" y="0" width="828" height="38" fill="#F0FDFA" stroke="#CCFBF1" stroke-width="1" />
+      <text x="12" y="24" class="mono" font-size="11.5" fill="#0F766E" font-weight="700">E0</text>
+      <text x="54" y="24" class="mono" font-size="11.5" fill="#15803D" font-weight="700">ON</text>
+      <text x="98" y="24" class="ui" font-size="11.5" fill="#0F172A" font-weight="700">SCPI マルチメータ＆天秤</text>
+      <text x="274" y="24" class="mono" font-size="11" fill="#0F766E" font-weight="700">Serial: COM3 (9600,8,N,1)</text>
+      <text x="486" y="24" class="ui" font-size="11" fill="#0F766E">SCPIプリセット ＋ 1s周期送信</text>
+      <text x="680" y="24" class="ui" font-size="10.5" fill="#15803D" font-weight="700">● 稼働中</text>
+      <text x="760" y="24" class="mono" font-size="10.5" fill="#334155">142 / 142</text>
+    </g>
+
+    <!-- Row E1 -->
+    <g transform="translate(0, 66)">
+      <rect x="0" y="0" width="828" height="38" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+      <text x="12" y="24" class="mono" font-size="11.5" fill="#334155" font-weight="700">E1</text>
+      <text x="54" y="24" class="mono" font-size="11.5" fill="#15803D" font-weight="700">ON</text>
+      <text x="98" y="24" class="ui" font-size="11.5" fill="#0F172A" font-weight="700">Modbus TCP 温調計スレーブ</text>
+      <text x="274" y="24" class="mono" font-size="11" fill="#0F172A">TCP Server: 0.0.0.0:502</text>
+      <text x="486" y="24" class="ui" font-size="11" fill="#1D4ED8" font-weight="600">[Modbus] 仮想スレーブ (Unit=1)</text>
+      <text x="680" y="24" class="ui" font-size="10.5" fill="#1D4ED8" font-weight="700">● 2接続</text>
+      <text x="760" y="24" class="mono" font-size="10.5" fill="#334155">850 / 850</text>
+    </g>
+
+    <!-- Row E2 -->
+    <g transform="translate(0, 104)">
+      <rect x="0" y="0" width="828" height="38" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+      <text x="12" y="24" class="mono" font-size="11.5" fill="#334155" font-weight="700">E2</text>
+      <text x="54" y="24" class="mono" font-size="11.5" fill="#15803D" font-weight="700">ON</text>
+      <text x="98" y="24" class="ui" font-size="11.5" fill="#0F172A" font-weight="700">MELSEC QnA互換 3E 仮想PLC</text>
+      <text x="274" y="24" class="mono" font-size="11" fill="#0F172A">TCP Server: 0.0.0.0:5000</text>
+      <text x="486" y="24" class="ui" font-size="11" fill="#1D4ED8" font-weight="600">[MC 3E] 仮想スレーブ (Bin/ASC)</text>
+      <text x="680" y="24" class="ui" font-size="10.5" fill="#15803D" font-weight="700">● 待受中</text>
+      <text x="760" y="24" class="mono" font-size="10.5" fill="#334155">64 / 64</text>
+    </g>
+
+    <!-- Row E3 -->
+    <g transform="translate(0, 142)">
+      <rect x="0" y="0" width="828" height="38" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1" />
+      <text x="12" y="24" class="mono" font-size="11.5" fill="#92400E" font-weight="700">E3</text>
+      <text x="54" y="24" class="mono" font-size="11.5" fill="#15803D" font-weight="700">ON</text>
+      <text x="98" y="24" class="ui" font-size="11.5" fill="#0F172A" font-weight="700">実機PLC 透過Proxy＆異常注入</text>
+      <text x="274" y="24" class="mono" font-size="11" fill="#6D28D9" font-weight="700">TCP 15000 -&gt; 192.168.1.10:5000</text>
+      <text x="486" y="24" class="ui" font-size="11" fill="#B45309" font-weight="600">透過中継 ＋ 5回毎CRC破壊</text>
+      <text x="680" y="24" class="ui" font-size="10.5" fill="#B45309" font-weight="700">● 中継中</text>
+      <text x="760" y="24" class="mono" font-size="10.5" fill="#334155">310 / 310</text>
+    </g>
+
+    <!-- 余白行ガイド -->
+    <text x="16" y="212" class="ui" font-size="10.5" fill="#64748B">ダブルクリックで [チャネル設定] を開く / 右クリックメニューから個別開始・停止・複製・XML出力が可能</text>
+  </g>
+
+  <!-- ステータスバー -->
+  <rect x="25" y="396" width="850" height="31" rx="4" fill="#E2E8F0" />
+  <text x="40" y="416" class="ui" font-size="11" font-weight="700" fill="#0F766E">● 稼働中: 4 / 4 チャネル</text>
+  <line x1="190" y1="402" x2="190" y2="422" stroke="#94A3B8" stroke-width="1" />
+  <text x="198" y="416" class="ui" font-size="10.2" fill="#1E3A8A" font-weight="600">有効拡張: Modbus, Melco, MelcoMC, Telnet, Omron, Keyence</text>
+  <line x1="510" y1="402" x2="510" y2="422" stroke="#94A3B8" stroke-width="1" />
+  <text x="520" y="416" class="mono" font-size="9.8" fill="#334155">FormLifecycleHelper [Point] Key="EmulatorMainForm" (X,Y,W,H,DPI)</text>
+</svg>

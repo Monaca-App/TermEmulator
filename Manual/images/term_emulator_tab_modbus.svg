@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="510" viewBox="0 0 880 510">
+  <defs>
+    <filter id="cardShadow" x="-2%" y="-2%" width="104%" height="106%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.14" />
+    </filter>
+    <style>
+      .ui { font-family: 'Yu Gothic UI', 'Meiryo UI', 'Segoe UI', sans-serif; }
+      .mono { font-family: 'Consolas', 'BIZ UDGothic', 'MS Gothic', monospace; }
+      .lbl { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11px; font-weight: 700; fill: #1E293B; }
+      .sub { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 10.5px; fill: #475569; }
+      .inp { fill: #FFFFFF; stroke: #94A3B8; stroke-width: 1.2; rx: 3; }
+      .grp { fill: #FFFFFF; stroke: #CBD5E1; stroke-width: 1.1; rx: 5; }
+      .grp-hdr { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11.5px; font-weight: 700; fill: #1E3A8A; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="880" height="510" fill="#F8FAFC" rx="10" />
+  <text x="24" y="25" class="ui" font-size="13.5" font-weight="700" fill="#0F172A">図 4-1 : [Modbus] 仮想スレーブ専用タブ画面（TermAnalysis.Modbus.dll 内蔵 : ucSlaveModbus）</text>
+
+  <!-- DLL 出自 ＆ ライセンスバッジ -->
+  <rect x="640" y="9" width="216" height="22" rx="11" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1" />
+  <text x="748" y="24" class="ui" font-size="10.2" font-weight="700" fill="#1D4ED8" text-anchor="middle">✓ TermAddIn_Modbus.License 有効</text>
+
+  <!-- タブストリップ (Modbus タブ選択状態) -->
+  <path d="M 28 66 L 28 44 Q 28 40 32 40 L 130 40 Q 134 40 134 44 L 134 66 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="81" y="57" class="ui" font-size="10.5" font-weight="600" fill="#475569" text-anchor="middle">汎用応答ルール</text>
+
+  <path d="M 138 66 L 138 44 Q 138 40 142 40 L 232 40 Q 236 40 236 44 L 236 66 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="187" y="57" class="ui" font-size="10.5" font-weight="600" fill="#475569" text-anchor="middle">周期・シナリオ</text>
+
+  <path d="M 240 66 L 240 44 Q 240 40 244 40 L 320 40 Q 324 40 324 44 L 324 66 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="282" y="57" class="ui" font-size="10.5" font-weight="600" fill="#475569" text-anchor="middle">異常エミュ</text>
+
+  <!-- アクティブタブ: [Modbus] -->
+  <path d="M 330 67 L 330 39 Q 330 35 334 35 L 424 35 Q 428 35 428 39 L 428 67 Z" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.8" />
+  <text x="379" y="56" class="ui" font-size="11.5" font-weight="700" fill="#1D4ED8" text-anchor="middle">Modbus</text>
+
+  <path d="M 432 66 L 432 44 Q 432 40 436 40 L 512 40 Q 516 40 516 44 L 516 66 Z" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1" />
+  <text x="474" y="57" class="ui" font-size="10.5" font-weight="600" fill="#1E40AF" text-anchor="middle">MELSEC</text>
+
+  <path d="M 520 66 L 520 44 Q 520 40 524 40 L 596 40 Q 600 40 600 44 L 600 66 Z" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1" />
+  <text x="560" y="57" class="ui" font-size="10.5" font-weight="600" fill="#1E40AF" text-anchor="middle">MC 3E</text>
+
+  <path d="M 604 66 L 604 44 Q 604 40 608 40 L 678 40 Q 682 40 682 44 L 682 66 Z" fill="#CCFBF1" stroke="#5EEAD4" stroke-width="1" />
+  <text x="643" y="57" class="ui" font-size="10.5" font-weight="600" fill="#0F766E" text-anchor="middle">Telnet</text>
+
+  <path d="M 686 66 L 686 44 Q 686 40 690 40 L 762 40 Q 766 40 766 44 L 766 66 Z" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1" />
+  <text x="726" y="57" class="ui" font-size="10.2" font-weight="600" fill="#1E40AF" text-anchor="middle">OMRON</text>
+
+  <path d="M 770 66 L 770 44 Q 770 40 774 40 L 848 40 Q 852 40 852 44 L 852 66 Z" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1" />
+  <text x="811" y="57" class="ui" font-size="10.0" font-weight="600" fill="#1E40AF" text-anchor="middle">KEYENCE</text>
+
+  <!-- ucSlaveModbus 本体コンテナ -->
+  <g filter="url(#cardShadow)">
+    <rect x="24" y="66" width="832" height="420" rx="5" fill="#F8FAFC" stroke="#2563EB" stroke-width="1.5" />
+  </g>
+  <line x1="331" y1="66" x2="427" y2="66" stroke="#F8FAFC" stroke-width="2.5" />
+
+  <!-- 上部有効化バー ＆ メモリ監視ショートカット -->
+  <rect x="38" y="80" width="804" height="38" rx="5" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.2" />
+  <rect x="52" y="91" width="16" height="16" rx="3" fill="#2563EB" />
+  <path d="M 55 99 L 58.5 102.5 L 65 95" stroke="#FFFFFF" stroke-width="2" fill="none" />
+  <text x="76" y="104" class="ui" font-size="11.5" font-weight="700" fill="#1E3A8A">このチャネルで Modbus 仮想スレーブ応答を有効にする</text>
+
+  <rect x="614" y="85" width="216" height="28" rx="4" fill="#1D4ED8" />
+  <text x="722" y="103" class="ui" font-size="10.8" font-weight="700" fill="#FFFFFF" text-anchor="middle">仮想メモリ監視を開く (0x/1x/3x/4x)</text>
+
+  <!-- ① プロトコルフレーミング・局番・エンディアン設定 -->
+  <rect x="38" y="128" width="804" height="122" class="grp" />
+  <text x="52" y="149" class="grp-hdr">① フレーミング方式・スレーブ局番 (Unit ID)・ワード順序設定</text>
+
+  <text x="52" y="177" class="lbl">伝送フレーミング:</text>
+  <circle cx="164" cy="173" r="6.5" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.6" />
+  <circle cx="164" cy="173" r="3.5" fill="#2563EB" />
+  <text x="176" y="177" class="ui" font-size="11" font-weight="700" fill="#1D4ED8">Modbus TCP (MBAP)</text>
+
+  <circle cx="314" cy="173" r="6.5" fill="#FFFFFF" stroke="#64748B" stroke-width="1.4" />
+  <text x="326" y="177" class="ui" font-size="11" fill="#334155">Modbus RTU (CRC-16)</text>
+
+  <circle cx="468" cy="173" r="6.5" fill="#FFFFFF" stroke="#64748B" stroke-width="1.4" />
+  <text x="480" y="177" class="ui" font-size="11" fill="#334155">Modbus ASCII (:〜CRLF + LRC)</text>
+
+  <circle cx="666" cy="173" r="6.5" fill="#FFFFFF" stroke="#64748B" stroke-width="1.4" />
+  <text x="678" y="177" class="ui" font-size="11" fill="#334155">RTU/ASCII 自動判別</text>
+
+  <text x="52" y="210" class="lbl">Unit ID (局番):</text>
+  <rect x="154" y="193" width="66" height="25" class="inp" />
+  <text x="187" y="210" class="mono" font-size="11.5" font-weight="700" fill="#0F172A" text-anchor="middle">1</text>
+  <text x="226" y="210" class="sub">(1〜247)</text>
+
+  <rect x="292" y="198" width="14" height="14" rx="2" fill="#2563EB" />
+  <path d="M 295 205 L 298 208 L 303 201" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+  <text x="312" y="210" class="ui" font-size="10.8" fill="#1E293B">ブロードキャスト書込 (Unit=0) 受理</text>
+
+  <rect x="524" y="198" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2" />
+  <text x="544" y="210" class="ui" font-size="10.8" fill="#334155">全 Unit ID 応答 (ワイルドカード)</text>
+
+  <text x="52" y="239" class="lbl">32bit ワード順:</text>
+  <rect x="154" y="223" width="232" height="22" class="inp" />
+  <text x="164" y="238" class="mono" font-size="10.5" fill="#0F172A">Big-Endian [AB CD] (Modbus標準) ▼</text>
+
+  <text x="414" y="239" class="lbl">基準応答遅延:</text>
+  <rect x="502" y="223" width="62" height="22" class="inp" />
+  <text x="533" y="238" class="mono" font-size="11" fill="#0F172A" text-anchor="middle">2</text>
+  <text x="570" y="239" class="sub">ms</text>
+
+  <text x="614" y="239" class="lbl">アドレス上限:</text>
+  <rect x="698" y="223" width="84" height="22" class="inp" />
+  <text x="740" y="238" class="mono" font-size="11" fill="#0F172A" text-anchor="middle">9999</text>
+
+  <!-- ② 許可ファンクションコード設定 -->
+  <rect x="38" y="260" width="804" height="92" class="grp" />
+  <text x="52" y="281" class="grp-hdr">② 対応ファンクションコード許可設定（OFF にした FC は Exception 01: Illegal Function を返却）</text>
+
+  <g transform="translate(52, 294)">
+    <rect x="0" y="0" width="14" height="14" rx="2" fill="#2563EB" /><path d="M 3 7 L 6 10 L 11 3" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+    <text x="20" y="12" class="mono" font-size="10.8" fill="#0F172A">01: Read Coils (0x)</text>
+
+    <rect x="196" y="0" width="14" height="14" rx="2" fill="#2563EB" /><path d="M 199 7 L 202 10 L 207 3" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+    <text x="216" y="12" class="mono" font-size="10.8" fill="#0F172A">02: Read Discrete In (1x)</text>
+
+    <rect x="414" y="0" width="14" height="14" rx="2" fill="#2563EB" /><path d="M 417 7 L 420 10 L 425 3" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+    <text x="434" y="12" class="mono" font-size="10.8" fill="#0F172A">03: Read Holding Regs (4x)</text>
+
+    <rect x="634" y="0" width="14" height="14" rx="2" fill="#2563EB" /><path d="M 637 7 L 640 10 L 645 3" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+    <text x="654" y="12" class="mono" font-size="10.8" fill="#0F172A">04: Read Input Regs (3x)</text>
+
+    <rect x="0" y="28" width="14" height="14" rx="2" fill="#2563EB" /><path d="M 3 35 L 6 38 L 11 31" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+    <text x="20" y="40" class="mono" font-size="10.8" fill="#0F172A">05/06: Write Single</text>
+
+    <rect x="196" y="28" width="14" height="14" rx="2" fill="#2563EB" /><path d="M 199 35 L 202 38 L 207 31" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+    <text x="216" y="40" class="mono" font-size="10.8" fill="#0F172A">0F/10: Write Multiple</text>
+
+    <rect x="414" y="28" width="14" height="14" rx="2" fill="#2563EB" /><path d="M 417 35 L 420 38 L 425 31" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+    <text x="434" y="40" class="mono" font-size="10.8" fill="#0F172A">17: Read/Write Multiple Regs</text>
+  </g>
+
+  <!-- ③ Modbus 例外応答（Exception Code）模擬注入 -->
+  <rect x="38" y="362" width="804" height="110" rx="5" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1.2" />
+  <text x="52" y="383" class="ui" font-size="11.5" font-weight="700" fill="#92400E">③ Modbus 例外応答フレーム（Exception Code: FC | 0x80）模擬注入設定</text>
+
+  <text x="52" y="413" class="lbl">応答モード:</text>
+  <rect x="134" y="396" width="350" height="25" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2" rx="3" />
+  <text x="144" y="413" class="ui" font-size="11" font-weight="700" fill="#0F172A">00: 通常応答（VirtualDeviceMemoryStore 読み書き） ▼</text>
+
+  <text x="504" y="413" class="lbl">発動条件:</text>
+  <rect x="568" y="396" width="256" height="25" class="inp" />
+  <text x="578" y="413" class="ui" font-size="10.8" fill="#334155">5回に1回 (EveryN=5) で例外返却 ▼</text>
+
+  <text x="52" y="445" class="sub">選択可能な Exception Code :  01 (Illegal Function) / 02 (Illegal Data Address) / 03 (Illegal Data Value) / 04 (Device Failure) / 06 (Device Busy)</text>
+  <text x="52" y="463" class="mono" font-size="10" fill="#64748B">実装配置: Apr/Term/ExtAnalysis/TermAnalysis.Modbus/Simulation/ucSlaveModbus.cs (ModbusSlaveTab : IProtocolSlaveTab)</text>
+</svg>
+

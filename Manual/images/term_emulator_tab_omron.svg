@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="510" viewBox="0 0 880 510">
+  <defs>
+    <filter id="cardShadow" x="-2%" y="-2%" width="104%" height="106%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.14" />
+    </filter>
+    <style>
+      .ui { font-family: 'Yu Gothic UI', 'Meiryo UI', 'Segoe UI', sans-serif; }
+      .mono { font-family: 'Consolas', 'BIZ UDGothic', 'MS Gothic', monospace; }
+      .lbl { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11px; font-weight: 700; fill: #1E293B; }
+      .sub { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 10.5px; fill: #475569; }
+      .inp { fill: #FFFFFF; stroke: #94A3B8; stroke-width: 1.2; rx: 3; }
+      .grp { fill: #FFFFFF; stroke: #CBD5E1; stroke-width: 1.1; rx: 5; }
+      .grp-hdr { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11.5px; font-weight: 700; fill: #1E3A8A; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="880" height="510" fill="#F8FAFC" rx="10" />
+  <text x="24" y="25" class="ui" font-size="13.5" font-weight="700" fill="#0F172A">図 4-5 : [OMRON] OMRON FINS / HostLink 仮想 PLC タブ画面（TermAnalysis.Omron.dll 内蔵 : ucSlaveOmron）</text>
+
+  <!-- ライセンスバッジ -->
+  <rect x="638" y="9" width="218" height="22" rx="11" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1" />
+  <text x="747" y="24" class="ui" font-size="10.2" font-weight="700" fill="#1D4ED8" text-anchor="middle">✓ TermAddIn_Omron.License 有効</text>
+
+  <!-- タブストリップ (OMRON タブ選択状態) -->
+  <path d="M 28 66 L 28 44 Q 28 40 32 40 L 128 40 Q 132 40 132 44 L 132 66 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="80" y="57" class="ui" font-size="10.2" font-weight="600" fill="#475569" text-anchor="middle">汎用応答ルール</text>
+
+  <path d="M 136 66 L 136 44 Q 136 40 140 40 L 228 40 Q 232 40 232 44 L 232 66 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="184" y="57" class="ui" font-size="10.2" font-weight="600" fill="#475569" text-anchor="middle">周期・シナリオ</text>
+
+  <path d="M 236 66 L 236 44 Q 236 40 240 40 L 314 40 Q 318 40 318 44 L 318 66 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="277" y="57" class="ui" font-size="10.2" font-weight="600" fill="#475569" text-anchor="middle">異常エミュ</text>
+
+  <path d="M 324 66 L 324 44 Q 324 40 328 40 L 402 40 Q 406 40 406 44 L 406 66 Z" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1" />
+  <text x="365" y="57" class="ui" font-size="10.2" font-weight="600" fill="#1E40AF" text-anchor="middle">Modbus</text>
+
+  <path d="M 410 66 L 410 44 Q 410 40 414 40 L 488 40 Q 492 40 492 44 L 492 66 Z" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1" />
+  <text x="451" y="57" class="ui" font-size="10.2" font-weight="600" fill="#1E40AF" text-anchor="middle">MELSEC</text>
+
+  <path d="M 496 66 L 496 44 Q 496 40 500 40 L 568 40 Q 572 40 572 44 L 572 66 Z" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1" />
+  <text x="534" y="57" class="ui" font-size="10.2" font-weight="600" fill="#1E40AF" text-anchor="middle">MC 3E</text>
+
+  <path d="M 576 66 L 576 44 Q 576 40 580 40 L 646 40 Q 650 40 650 44 L 650 66 Z" fill="#CCFBF1" stroke="#5EEAD4" stroke-width="1" />
+  <text x="613" y="57" class="ui" font-size="10.2" font-weight="600" fill="#0F766E" text-anchor="middle">Telnet</text>
+
+  <!-- アクティブタブ: [OMRON] -->
+  <path d="M 654 67 L 654 39 Q 654 35 658 35 L 746 35 Q 750 35 750 39 L 750 67 Z" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.8" />
+  <text x="702" y="56" class="ui" font-size="11.5" font-weight="700" fill="#1D4ED8" text-anchor="middle">OMRON</text>
+
+  <path d="M 754 66 L 754 44 Q 754 40 758 40 L 844 40 Q 848 40 848 44 L 848 66 Z" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1" />
+  <text x="801" y="57" class="ui" font-size="10.2" font-weight="600" fill="#1E40AF" text-anchor="middle">KEYENCE</text>
+
+  <!-- ucSlaveOmron 本体コンテナ -->
+  <g filter="url(#cardShadow)">
+    <rect x="24" y="66" width="832" height="420" rx="5" fill="#F8FAFC" stroke="#2563EB" stroke-width="1.5" />
+  </g>
+  <line x1="655" y1="66" x2="749" y2="66" stroke="#F8FAFC" stroke-width="2.5" />
+
+  <!-- 上部有効化バー -->
+  <rect x="38" y="80" width="804" height="38" rx="5" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.2" />
+  <rect x="52" y="91" width="16" height="16" rx="3" fill="#2563EB" />
+  <path d="M 55 99 L 58.5 102.5 L 65 95" stroke="#FFFFFF" stroke-width="2" fill="none" />
+  <text x="76" y="104" class="ui" font-size="11.5" font-weight="700" fill="#1E3A8A">このチャネルで オムロン OMRON FINS (UDP/TCP) ＆ HostLink 仮想 PLC 応答を有効にする</text>
+
+  <rect x="598" y="85" width="232" height="28" rx="4" fill="#1D4ED8" />
+  <text x="714" y="103" class="ui" font-size="10.3" font-weight="700" fill="#FFFFFF" text-anchor="middle">仮想メモリ監視を開く (DM/CIO/WR/EM)</text>
+
+  <!-- ① プロトコル種別・FINS ノードルーティング設定 -->
+  <rect x="38" y="128" width="804" height="124" class="grp" />
+  <text x="52" y="149" class="grp-hdr">① FINS / HostLink トランスポート・ノードアドレス（DNA/DA1/DA2・UnitNo）設定</text>
+
+  <text x="52" y="177" class="lbl">待受フレーミング:</text>
+  <circle cx="168" cy="173" r="6.5" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.6" />
+  <circle cx="168" cy="173" r="3.5" fill="#2563EB" />
+  <text x="180" y="177" class="ui" font-size="10.8" font-weight="700" fill="#1D4ED8">自動判別 (FINS/UDP・FINS/TCP 24Bノード応答・HostLink @FA/Cモード)</text>
+
+  <circle cx="584" cy="173" r="6.5" fill="#FFFFFF" stroke="#64748B" stroke-width="1.4" />
+  <text x="596" y="177" class="ui" font-size="10.8" fill="#334155">FINS固定</text>
+
+  <circle cx="676" cy="173" r="6.5" fill="#FFFFFF" stroke="#64748B" stroke-width="1.4" />
+  <text x="688" y="177" class="ui" font-size="10.8" fill="#334155">HostLink固定</text>
+
+  <text x="52" y="210" class="lbl">自局 NW (DNA):</text>
+  <rect x="148" y="193" width="50" height="24" class="inp" />
+  <text x="173" y="209" class="mono" font-size="11.5" font-weight="700" fill="#0F172A" text-anchor="middle">0</text>
+
+  <text x="214" y="210" class="lbl">自局ノード (DA1):</text>
+  <rect x="318" y="193" width="54" height="24" class="inp" />
+  <text x="345" y="209" class="mono" font-size="11.5" font-weight="700" fill="#0F172A" text-anchor="middle">1</text>
+
+  <text x="388" y="210" class="lbl">号機番号 (DA2):</text>
+  <rect x="484" y="193" width="54" height="24" class="inp" />
+  <text x="511" y="209" class="mono" font-size="11.5" font-weight="700" fill="#0F172A" text-anchor="middle">0x00</text>
+
+  <text x="556" y="210" class="lbl">HostLink 局番:</text>
+  <rect x="646" y="193" width="52" height="24" class="inp" />
+  <text x="672" y="209" class="mono" font-size="11.5" font-weight="700" fill="#0F172A" text-anchor="middle">00</text>
+
+  <rect x="52" y="228" width="14" height="14" rx="2" fill="#2563EB" />
+  <path d="M 55 235 L 58 238 L 63 231" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+  <text x="72" y="240" class="ui" font-size="10.8" fill="#1E293B">任意の宛先ノード (DA1=0x00 含む) を受理し SID を自動折返し</text>
+
+  <text x="462" y="240" class="lbl">模擬コントローラ形名 (0501):</text>
+  <rect x="628" y="224" width="142" height="22" class="inp" />
+  <text x="638" y="239" class="mono" font-size="11" fill="#0F172A">NJ501-1500</text>
+
+  <!-- ② 対応 FINS / HostLink コマンド設定 -->
+  <rect x="38" y="262" width="804" height="90" class="grp" />
+  <text x="52" y="283" class="grp-hdr">② 対応 FINS / HostLink コマンド許可設定（FinsFrameEngine / FinsDeviceParser 共用）</text>
+
+  <g transform="translate(52, 296)">
+    <rect x="0" y="0" width="14" height="14" rx="2" fill="#2563EB" /><path d="M 3 7 L 6 10 L 11 3" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+    <text x="20" y="12" class="mono" font-size="10.8" fill="#0F172A">0101: メモリエリア読出 (Word/Bit)</text>
+
+    <rect x="284" y="0" width="14" height="14" rx="2" fill="#2563EB" /><path d="M 287 7 L 290 10 L 295 3" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+    <text x="304" y="12" class="mono" font-size="10.8" fill="#0F172A">0102: メモリエリア書込 (Word/Bit)</text>
+
+    <rect x="568" y="0" width="14" height="14" rx="2" fill="#2563EB" /><path d="M 571 7 L 574 10 L 579 3" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+    <text x="588" y="12" class="mono" font-size="10.8" fill="#0F172A">0501: 形名情報読出</text>
+
+    <rect x="0" y="28" width="14" height="14" rx="2" fill="#2563EB" /><path d="M 3 35 L 6 38 L 11 31" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+    <text x="20" y="40" class="mono" font-size="10.8" fill="#0F172A">0104: 複合読出 (DM/CIO/WR/HR/AR/EM)</text>
+
+    <rect x="284" y="28" width="14" height="14" rx="2" fill="#2563EB" /><path d="M 287 35 L 290 38 L 295 31" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+    <text x="304" y="40" class="mono" font-size="10.8" fill="#0F172A">HostLink Cモード (RD/WD/RR/MM + FCS)</text>
+
+    <rect x="568" y="28" width="14" height="14" rx="2" fill="#2563EB" /><path d="M 571 35 L 574 38 L 579 31" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+    <text x="588" y="40" class="ui" font-size="10.8" fill="#0F172A">HostLink FCS 検査有効</text>
+  </g>
+
+  <!-- ③ FINS 終了コード (MRES/SRES) 異常模擬 -->
+  <rect x="38" y="362" width="804" height="110" rx="5" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1.2" />
+  <text x="52" y="383" class="ui" font-size="11.5" font-weight="700" fill="#92400E">③ FINS 応答フレーム (ICF=0xC0) 終了コード（MRES/SRES）＆ HostLink 終了コード異常模擬</text>
+
+  <text x="52" y="413" class="lbl">終了コード指定:</text>
+  <rect x="148" y="396" width="384" height="25" fill="#FFFFFF" stroke="#D97706" stroke-width="1.2" rx="3" />
+  <text x="158" y="413" class="ui" font-size="11" font-weight="700" fill="#0F172A">0x0000 : 正常終了（Big-Endian 仮想メモリ応答） ▼</text>
+
+  <text x="548" y="413" class="lbl">発動条件:</text>
+  <rect x="612" y="396" width="212" height="25" class="inp" />
+  <text x="622" y="413" class="ui" font-size="10.8" fill="#334155">常時 / N回周期 / 確率指定 ▼</text>
+
+  <text x="52" y="445" class="sub">選択可能な異常終了コード :  1001 (コマンド長超過) / 1101 (エリア種別誤り) / 1103 (開始アドレス範囲外) / 2102 (書込不可) / 任意 HEX 4桁</text>
+  <text x="52" y="463" class="mono" font-size="10" fill="#64748B">実装配置: Apr/Term/ExtAnalysis/TermAnalysis.Omron/Simulation/ucSlaveOmron.cs (OmronFinsSlaveTab : IProtocolSlaveTab)</text>
+</svg>
+
