@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="615" viewBox="0 0 900 615">
+  <defs>
+    <filter id="dlgShadow" x="-3%" y="-3%" width="106%" height="108%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#0F172A" flood-opacity="0.16" />
+    </filter>
+    <filter id="menuShadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.18" />
+    </filter>
+    <style>
+      .ui { font-family: 'Yu Gothic UI', 'Meiryo UI', 'Segoe UI', sans-serif; }
+      .mono { font-family: 'Consolas', 'BIZ UDGothic', 'MS Gothic', monospace; }
+      .lbl { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11px; font-weight: 600; fill: #1E293B; }
+      .inp { fill: #FFFFFF; stroke: #94A3B8; stroke-width: 1.1; rx: 2; }
+      .btn { fill: #FFFFFF; stroke: #94A3B8; stroke-width: 1.1; rx: 3; }
+      .grid-hdr { fill: #F1F5F9; stroke: #CBD5E1; stroke-width: 1; }
+      .grid-hdr-txt { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 10.2px; font-weight: 700; fill: #1E293B; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="615" fill="#F1F5F9" rx="10" />
+  <text x="20" y="24" class="ui" font-size="13.5" font-weight="700" fill="#0F172A">図 4-A : [自動応答ルール] 基本タブ画面（全10列グリッド ＋ マクロ書式挿入補助 : EmulatorChannelDialog）</text>
+
+  <!-- ダイアログ外枠 -->
+  <g filter="url(#dlgShadow)">
+    <rect x="20" y="36" width="860" height="560" rx="7" fill="#F0F0F0" stroke="#94A3B8" stroke-width="1.4" />
+    <path d="M 20 43 Q 20 36 27 36 L 873 36 Q 880 36 880 43 L 880 68 L 20 68 Z" fill="#FFFFFF" />
+    <line x1="20" y1="68" x2="880" y2="68" stroke="#E2E8F0" stroke-width="1" />
+  </g>
+
+  <!-- タイトルバー -->
+  <rect x="32" y="44" width="16" height="16" rx="3" fill="#0F766E" />
+  <text x="40" y="56" class="mono" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">TE</text>
+  <text x="56" y="57" class="ui" font-size="12" font-weight="600" fill="#0F172A">チャネル詳細設定 - Monaca TermEmulator</text>
+  <g stroke="#475569" stroke-width="1.3" fill="none">
+    <line x1="794" y1="53" x2="806" y2="53" />
+    <rect x="822" y="47" width="11" height="10" />
+    <line x1="850" y1="47" x2="861" y2="58" />
+    <line x1="861" y1="47" x2="850" y2="58" />
+  </g>
+
+  <!-- 上部共通ヘッダバー（2行整列） -->
+  <rect x="21" y="69" width="858" height="66" fill="#F0F0F0" />
+  <!-- Row 0 -->
+  <text x="92" y="92" class="lbl" text-anchor="end">チャネル名:</text>
+  <rect x="98" y="76" width="225" height="23" class="inp" />
+  <text x="106" y="92" class="ui" font-size="11" fill="#0F172A">SCPI Virtual DMM</text>
+
+  <text x="410" y="92" class="lbl" text-anchor="end">動作モード:</text>
+  <rect x="416" y="76" width="250" height="23" class="inp" />
+  <text x="424" y="92" class="ui" font-size="11" fill="#0F172A">TCP サーバー仮想機器</text>
+  <text x="652" y="92" class="ui" font-size="10" fill="#475569">▼</text>
+
+  <!-- Row 1 -->
+  <text x="92" y="121" class="lbl" text-anchor="end">プロトコル:</text>
+  <rect x="98" y="105" width="225" height="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.2" rx="2" />
+  <text x="106" y="121" class="ui" font-size="11" font-weight="600" fill="#1D4ED8">なし (汎用応答ルールのみ)</text>
+  <text x="309" y="121" class="ui" font-size="10" fill="#1D4ED8">▼</text>
+
+  <rect x="352" y="110" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2" />
+  <text x="372" y="121" class="ui" font-size="11" fill="#0F172A">自動開始</text>
+
+  <rect x="444" y="110" width="14" height="14" rx="2" fill="#0078D7" />
+  <path d="M 447 117 L 450 120 L 455 113" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+  <text x="464" y="121" class="ui" font-size="11" fill="#0F172A">全チャネル共有メモリ</text>
+
+  <!-- タブストリップ (自動応答ルール 選択状態) -->
+  <g transform="translate(0, 28)">
+  <path d="M 28 136 L 28 116 Q 28 113 31 113 L 136 113 Q 139 113 139 116 L 139 136 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="83.5" y="128" class="ui" font-size="10.5" fill="#334155" text-anchor="middle">接続・フレーミング</text>
+
+  <path d="M 141 136 L 141 114 Q 141 111 144 111 L 238 111 Q 241 111 241 114 L 241 136 Z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2" />
+  <text x="191" y="128" class="ui" font-size="10.8" font-weight="700" fill="#0F172A" text-anchor="middle">自動応答ルール</text>
+
+  <path d="M 243 136 L 243 116 Q 243 113 246 113 L 306 113 Q 309 113 309 116 L 309 136 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="276" y="128" class="ui" font-size="10.2" fill="#334155" text-anchor="middle">異常注入</text>
+
+  <path d="M 311 136 L 311 116 Q 311 113 314 113 L 370 113 Q 373 113 373 116 L 373 136 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="342" y="128" class="ui" font-size="10.2" fill="#334155" text-anchor="middle">定周期</text>
+
+  <rect x="380" y="114" width="290" height="20" rx="3" fill="#EFF6FF" stroke="#93C5FD" stroke-dasharray="3,2" stroke-width="1" />
+  <text x="525" y="128" class="ui" font-size="9.8" fill="#1D4ED8" text-anchor="middle">※ 上部「プロトコル」選択時に対象専用タブが1つ追加表示</text>
+
+  <!-- タブページコンテナ -->
+  <rect x="26" y="135" width="848" height="380" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2" />
+  <line x1="142" y1="135" x2="240" y2="135" stroke="#FFFFFF" stroke-width="2" />
+
+  <!-- 上部操作バー (+ ルール追加 / - 削除 / CSV読込... / CSV保存... / マクロ書式 ▼) -->
+  <rect x="36" y="144" width="82" height="25" class="btn" />
+  <text x="77" y="160" class="ui" font-size="10.5" fill="#1E293B" text-anchor="middle">+ ルール追加</text>
+
+  <rect x="124" y="144" width="60" height="25" class="btn" />
+  <text x="154" y="160" class="ui" font-size="10.5" fill="#1E293B" text-anchor="middle">- 削除</text>
+
+  <rect x="190" y="144" width="76" height="25" class="btn" />
+  <text x="228" y="160" class="ui" font-size="10.5" fill="#1E293B" text-anchor="middle">CSV読込...</text>
+
+  <rect x="272" y="144" width="76" height="25" class="btn" />
+  <text x="310" y="160" class="ui" font-size="10.5" fill="#1E293B" text-anchor="middle">CSV保存...</text>
+
+  <rect x="354" y="144" width="94" height="25" rx="3" fill="#F0FDFA" stroke="#0D9488" stroke-width="1.2" />
+  <text x="401" y="160" class="ui" font-size="10.5" font-weight="700" fill="#0F766E" text-anchor="middle">マクロ書式 ▼</text>
+
+  <!-- 中央: ルール一覧グリッド (全10列: 実画面準拠) -->
+  <g transform="translate(36, 178)">
+    <rect x="0" y="0" width="828" height="282" fill="#FFFFFF" stroke="#64748B" stroke-width="1" />
+
+    <!-- ヘッダ 10 列 -->
+    <rect x="0" y="0" width="38" height="28" class="grid-hdr" />
+    <rect x="38" y="0" width="38" height="28" class="grid-hdr" />
+    <rect x="76" y="0" width="92" height="28" class="grid-hdr" />
+    <rect x="168" y="0" width="96" height="28" class="grid-hdr" />
+    <rect x="264" y="0" width="114" height="28" class="grid-hdr" />
+    <rect x="378" y="0" width="186" height="28" class="grid-hdr" />
+    <rect x="564" y="0" width="38" height="28" class="grid-hdr" />
+    <rect x="602" y="0" width="48" height="28" class="grid-hdr" />
+    <rect x="650" y="0" width="46" height="28" class="grid-hdr" />
+    <rect x="696" y="0" width="132" height="28" class="grid-hdr" />
+
+    <text x="19" y="18" class="grid-hdr-txt" text-anchor="middle">有効</text>
+    <text x="57" y="18" class="grid-hdr-txt" text-anchor="middle">順序</text>
+    <text x="82" y="18" class="grid-hdr-txt">ルール名</text>
+    <text x="174" y="18" class="grid-hdr-txt">照合方式</text>
+    <text x="270" y="18" class="grid-hdr-txt">照合パターン</text>
+    <text x="384" y="18" class="grid-hdr-txt">応答ペイロード</text>
+    <text x="583" y="18" class="grid-hdr-txt" text-anchor="middle">HEX</text>
+    <text x="626" y="18" class="grid-hdr-txt" text-anchor="middle">遅延ms</text>
+    <text x="673" y="18" class="grid-hdr-txt" text-anchor="middle">+Term</text>
+    <text x="702" y="18" class="grid-hdr-txt">メモリ連動 (D100=1)</text>
+
+    <!-- Row 1 -->
+    <g transform="translate(0, 28)">
+      <rect x="0" y="0" width="828" height="28" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+      <rect x="0" y="0" width="38" height="28" fill="#0078D7" />
+      <rect x="12" y="7" width="14" height="14" rx="2" fill="#0078D7" stroke="#FFFFFF" stroke-width="1.2" />
+      <path d="M 15 14 L 18 17 L 23 10" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+      <text x="57" y="18" class="mono" font-size="10.5" fill="#0F172A" text-anchor="middle">10</text>
+      <text x="82" y="18" class="ui" font-size="10.5" fill="#0F172A">IDN Query</text>
+      <text x="174" y="18" class="mono" font-size="10.2" fill="#0F172A">ExactAscii</text>
+      <text x="252" y="18" class="ui" font-size="9" fill="#64748B">▼</text>
+      <text x="270" y="18" class="mono" font-size="10.5" fill="#0F172A">*IDN?</text>
+      <text x="384" y="18" class="mono" font-size="10.2" fill="#0F172A">Monaca,DMM-6500,$SEQ:D4$</text>
+      <rect x="576" y="7" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#64748B" stroke-width="1.1" />
+      <text x="626" y="18" class="mono" font-size="10.5" fill="#0F172A" text-anchor="middle">0</text>
+      <rect x="666" y="7" width="14" height="14" rx="2" fill="#0078D7" />
+      <path d="M 669 14 L 672 17 L 677 10" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+      <text x="702" y="18" class="mono" font-size="10.2" fill="#64748B"></text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(0, 56)">
+      <rect x="0" y="0" width="828" height="28" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+      <rect x="12" y="7" width="14" height="14" rx="2" fill="#0078D7" />
+      <path d="M 15 14 L 18 17 L 23 10" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+      <text x="57" y="18" class="mono" font-size="10.5" fill="#0F172A" text-anchor="middle">20</text>
+      <text x="82" y="18" class="ui" font-size="10.5" fill="#0F172A">DC Voltage</text>
+      <text x="174" y="18" class="mono" font-size="10.2" fill="#0F172A">PrefixAscii</text>
+      <text x="252" y="18" class="ui" font-size="9" fill="#64748B">▼</text>
+      <text x="270" y="18" class="mono" font-size="10.5" fill="#0F172A">MEAS:VOLT</text>
+      <text x="384" y="18" class="mono" font-size="10.2" fill="#0F172A">+$RANDF:5.000,5.020$</text>
+      <rect x="576" y="7" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#64748B" stroke-width="1.1" />
+      <text x="626" y="18" class="mono" font-size="10.5" fill="#0F172A" text-anchor="middle">0</text>
+      <rect x="666" y="7" width="14" height="14" rx="2" fill="#0078D7" />
+      <path d="M 669 14 L 672 17 L 677 10" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+      <text x="702" y="18" class="mono" font-size="10.2" fill="#0F766E">D100=1</text>
+    </g>
+
+    <!-- Row 3 -->
+    <g transform="translate(0, 84)">
+      <rect x="0" y="0" width="828" height="28" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+      <rect x="12" y="7" width="14" height="14" rx="2" fill="#0078D7" />
+      <path d="M 15 14 L 18 17 L 23 10" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+      <text x="57" y="18" class="mono" font-size="10.5" fill="#0F172A" text-anchor="middle">30</text>
+      <text x="82" y="18" class="ui" font-size="10.5" fill="#0F172A">CH Read</text>
+      <text x="174" y="18" class="mono" font-size="10.2" fill="#1D4ED8">RegexAscii</text>
+      <text x="252" y="18" class="ui" font-size="9" fill="#64748B">▼</text>
+      <text x="270" y="18" class="mono" font-size="10.2" fill="#0F172A">^MEAS:CH(\d)\?$</text>
+      <text x="384" y="18" class="mono" font-size="10.2" fill="#0F172A">CH$CAP1$=$RANDF:4.98,5.02$</text>
+      <rect x="576" y="7" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#64748B" stroke-width="1.1" />
+      <text x="626" y="18" class="mono" font-size="10.5" fill="#0F172A" text-anchor="middle">15</text>
+      <rect x="666" y="7" width="14" height="14" rx="2" fill="#0078D7" />
+      <path d="M 669 14 L 672 17 L 677 10" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+      <text x="702" y="18" class="mono" font-size="10.2" fill="#0F766E">D101=$CAP1$</text>
+    </g>
+
+    <!-- Row 4 -->
+    <g transform="translate(0, 112)">
+      <rect x="0" y="0" width="828" height="28" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+      <rect x="12" y="7" width="14" height="14" rx="2" fill="#0078D7" />
+      <path d="M 15 14 L 18 17 L 23 10" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+      <text x="57" y="18" class="mono" font-size="10.5" fill="#0F172A" text-anchor="middle">40</text>
+      <text x="82" y="18" class="ui" font-size="10.5" fill="#0F172A">Binary ACK</text>
+      <text x="174" y="18" class="mono" font-size="10" fill="#6D28D9">WildcardHex</text>
+      <text x="252" y="18" class="ui" font-size="9" fill="#64748B">▼</text>
+      <text x="270" y="18" class="mono" font-size="10.2" fill="#0F172A">02 30 31 ?? 03</text>
+      <text x="384" y="18" class="mono" font-size="10.2" fill="#6D28D9">06 30 31 4F 4B 03 $CRC16_MODBUS$</text>
+      <rect x="576" y="7" width="14" height="14" rx="2" fill="#0078D7" />
+      <path d="M 579 14 L 582 17 L 587 10" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+      <text x="626" y="18" class="mono" font-size="10.5" fill="#0F172A" text-anchor="middle">10</text>
+      <rect x="666" y="7" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#64748B" stroke-width="1.1" />
+      <text x="702" y="18" class="mono" font-size="10.2" fill="#0F766E">M0=1</text>
+    </g>
+  </g>
+
+  <!-- マクロ書式ドロップダウンメニューのポップアップイメージ -->
+  <g filter="url(#menuShadow)" transform="translate(354, 171)">
+    <rect x="0" y="0" width="388" height="162" rx="4" fill="#FFFFFF" stroke="#0D9488" stroke-width="1.2" />
+    <rect x="1" y="1" width="386" height="22" fill="#F0FDFA" />
+    <text x="10" y="16" class="ui" font-size="9.8" font-weight="700" fill="#0F766E">クリックで選択中ルールの「応答ペイロード」末尾へ挿入:</text>
+    <text x="10" y="36" class="mono" font-size="9.8" fill="#0F172A">$SEQ:D4$             - 通し連番 (4桁ゼロ埋め)</text>
+    <text x="10" y="54" class="mono" font-size="9.8" fill="#0F172A">$TIME$ / $DATE$      - 現在時刻 / 現在日付</text>
+    <text x="10" y="72" class="mono" font-size="9.8" fill="#0F172A">$RAND:0,100$         - 整数乱数 (min,max)</text>
+    <rect x="2" y="78" width="384" height="19" fill="#DBEAFE" />
+    <text x="10" y="91" class="mono" font-size="9.8" font-weight="700" fill="#1E3A8A">$RANDF:5.000,5.020$  - 浮動小数点乱数 (小数桁自動追従)</text>
+    <text x="10" y="109" class="mono" font-size="9.8" fill="#0F172A">$CAP1$ / $ECHO$      - 正規表現グループ / 受信エコー</text>
+    <text x="10" y="127" class="mono" font-size="9.8" fill="#0F172A">$MEM:D100$           - 仮想デバイスメモリのワード値参照</text>
+    <line x1="8" y1="135" x2="380" y2="135" stroke="#E2E8F0" stroke-width="1" />
+    <text x="10" y="151" class="mono" font-size="9.6" fill="#0F766E">$CRC16_MODBUS$ / $CRC16_CCITT$ / $LRC$ / $SUM8_HEX$ / $XOR_HEX$ / $NMEA_CS$</text>
+  </g>
+
+  <!-- 下部: テスト電文バー -->
+  <text x="38" y="490" class="lbl">テスト電文:</text>
+  <rect x="104" y="474" width="220" height="23" class="inp" />
+  <text x="112" y="490" class="mono" font-size="10.8" fill="#0F172A">MEAS:CH2?</text>
+
+  <rect x="334" y="479" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2" />
+  <text x="353" y="490" class="ui" font-size="10.8" fill="#1E293B">HEX</text>
+
+  <rect x="386" y="473" width="76" height="25" class="btn" />
+  <text x="424" y="489" class="ui" font-size="10.5" fill="#1E293B" text-anchor="middle">照合テスト</text>
+
+  <text x="472" y="490" class="mono" font-size="10.5" fill="#145AAF">[一致: CH Read] -&gt; CH2=5.0031\r\n</text>
+
+  <!-- ダイアログ下部ボタンバー -->
+  <text x="32" y="546" class="mono" font-size="9.8" fill="#475569">実装配置: tool/TermEmulator/Forms/EmulatorChannelDialog.cs (_tabRules) + Simulation/GenericRuleResponder.cs</text>
+  <rect x="676" y="526" width="92" height="28" rx="4" fill="#FFFFFF" stroke="#0078D7" stroke-width="1.5" />
+  <text x="722" y="544" class="ui" font-size="11.5" font-weight="700" fill="#0F172A" text-anchor="middle">OK</text>
+  <rect x="776" y="526" width="92" height="28" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.1" />
+  <text x="822" y="544" class="ui" font-size="11.5" fill="#1E293B" text-anchor="middle">キャンセル</text>
+  </g>
+</svg>

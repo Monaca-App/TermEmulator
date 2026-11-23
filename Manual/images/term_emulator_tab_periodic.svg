@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="615" viewBox="0 0 900 615">
+  <defs>
+    <filter id="dlgShadow" x="-3%" y="-3%" width="106%" height="108%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#0F172A" flood-opacity="0.16" />
+    </filter>
+    <style>
+      .ui { font-family: 'Yu Gothic UI', 'Meiryo UI', 'Segoe UI', sans-serif; }
+      .mono { font-family: 'Consolas', 'BIZ UDGothic', 'MS Gothic', monospace; }
+      .lbl { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11px; font-weight: 600; fill: #1E293B; text-anchor: end; }
+      .inp { fill: #FFFFFF; stroke: #94A3B8; stroke-width: 1.1; rx: 2; }
+      .btn { fill: #FFFFFF; stroke: #94A3B8; stroke-width: 1.1; rx: 3; }
+      .grp { fill: #F8FAFC; stroke: #CBD5E1; stroke-width: 1.1; rx: 4; }
+      .grp-hdr { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11px; font-weight: 700; fill: #0F172A; }
+      .grid-hdr { fill: #F1F5F9; stroke: #CBD5E1; stroke-width: 1; }
+      .grid-hdr-txt { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 10.5px; font-weight: 700; fill: #1E293B; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="615" fill="#F1F5F9" rx="10" />
+  <text x="20" y="24" class="ui" font-size="13.5" font-weight="700" fill="#0F172A">図 4-C : [定周期] 基本タブ画面（定周期ストリーミング ＆ トリガ連動シナリオ再生 : EmulatorChannelDialog）</text>
+
+  <!-- ダイアログ外枠 -->
+  <g filter="url(#dlgShadow)">
+    <rect x="20" y="36" width="860" height="560" rx="7" fill="#F0F0F0" stroke="#94A3B8" stroke-width="1.4" />
+    <path d="M 20 43 Q 20 36 27 36 L 873 36 Q 880 36 880 43 L 880 68 L 20 68 Z" fill="#FFFFFF" />
+    <line x1="20" y1="68" x2="880" y2="68" stroke="#E2E8F0" stroke-width="1" />
+  </g>
+
+  <!-- タイトルバー -->
+  <rect x="32" y="44" width="16" height="16" rx="3" fill="#0F766E" />
+  <text x="40" y="56" class="mono" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">TE</text>
+  <text x="56" y="57" class="ui" font-size="12" font-weight="600" fill="#0F172A">チャネル詳細設定 - Monaca TermEmulator</text>
+  <g stroke="#475569" stroke-width="1.3" fill="none">
+    <line x1="794" y1="53" x2="806" y2="53" />
+    <rect x="822" y="47" width="11" height="10" />
+    <line x1="850" y1="47" x2="861" y2="58" />
+    <line x1="861" y1="47" x2="850" y2="58" />
+  </g>
+
+  <!-- 上部共通ヘッダバー（2行整列） -->
+  <rect x="21" y="69" width="858" height="66" fill="#F0F0F0" />
+  <!-- Row 0 -->
+  <text x="92" y="92" class="lbl">チャネル名:</text>
+  <rect x="98" y="76" width="225" height="23" class="inp" />
+  <text x="106" y="92" class="ui" font-size="11" fill="#0F172A">SCPI Virtual DMM</text>
+
+  <text x="410" y="92" class="lbl">動作モード:</text>
+  <rect x="416" y="76" width="250" height="23" class="inp" />
+  <text x="424" y="92" class="ui" font-size="11" fill="#0F172A">TCP サーバー仮想機器</text>
+  <text x="652" y="92" class="ui" font-size="10" fill="#475569">▼</text>
+
+  <!-- Row 1 -->
+  <text x="92" y="121" class="lbl">プロトコル:</text>
+  <rect x="98" y="105" width="225" height="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.2" rx="2" />
+  <text x="106" y="121" class="ui" font-size="11" font-weight="600" fill="#1D4ED8">なし (汎用応答ルールのみ)</text>
+  <text x="309" y="121" class="ui" font-size="10" fill="#1D4ED8">▼</text>
+
+  <rect x="352" y="110" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2" />
+  <text x="372" y="121" class="ui" font-size="11" fill="#0F172A">自動開始</text>
+
+  <rect x="444" y="110" width="14" height="14" rx="2" fill="#0078D7" />
+  <path d="M 447 117 L 450 120 L 455 113" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+  <text x="464" y="121" class="ui" font-size="11" fill="#0F172A">全チャネル共有メモリ</text>
+
+  <!-- タブストリップ (基本4タブ: 定周期[選択] ＋ プロトコル連動タブ枠) -->
+  <g transform="translate(0, 28)">
+  <path d="M 28 136 L 28 116 Q 28 113 31 113 L 136 113 Q 139 113 139 116 L 139 136 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="83.5" y="128" class="ui" font-size="10.2" fill="#334155" text-anchor="middle">接続・フレーミング</text>
+
+  <path d="M 141 136 L 141 116 Q 141 113 144 113 L 234 113 Q 237 113 237 116 L 237 136 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="189" y="128" class="ui" font-size="10.2" fill="#334155" text-anchor="middle">自動応答ルール</text>
+
+  <path d="M 239 136 L 239 116 Q 239 113 242 113 L 304 113 Q 307 113 307 116 L 307 136 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="273" y="128" class="ui" font-size="10.2" fill="#334155" text-anchor="middle">異常注入</text>
+
+  <path d="M 309 136 L 309 114 Q 309 111 312 111 L 368 111 Q 371 111 371 114 L 371 136 Z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2" />
+  <text x="340" y="128" class="ui" font-size="10.8" font-weight="700" fill="#0F172A" text-anchor="middle">定周期</text>
+
+  <rect x="378" y="114" width="290" height="20" rx="3" fill="#EFF6FF" stroke="#93C5FD" stroke-dasharray="3,2" stroke-width="1" />
+  <text x="523" y="128" class="ui" font-size="9.8" fill="#1D4ED8" text-anchor="middle">※ 上部「プロトコル」選択時に対象専用タブが1つ追加表示</text>
+
+  <!-- タブページコンテナ -->
+  <rect x="26" y="135" width="848" height="380" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2" />
+  <line x1="310" y1="135" x2="370" y2="135" stroke="#FFFFFF" stroke-width="2" />
+
+  <!-- 定周期ストリーミング送出・トリガ連動シナリオ再生 GroupBox (Dock=Fill) -->
+  <rect x="40" y="152" width="820" height="350" class="grp" />
+  <rect x="52" y="143" width="278" height="16" fill="#FFFFFF" />
+  <text x="56" y="155" class="grp-hdr">定周期ストリーミング送出・トリガ連動シナリオ再生</text>
+
+  <!-- Row 0: 定周期送出設定 -->
+  <rect x="54" y="176" width="14" height="14" rx="2" fill="#0078D7" />
+  <path d="M 57 183 L 60 186 L 65 179" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+  <text x="74" y="187" class="ui" font-size="11" fill="#0F172A">定周期送出</text>
+
+  <text x="196" y="187" class="lbl">周期(ms):</text>
+  <rect x="204" y="171" width="82" height="23" class="inp" />
+  <text x="212" y="187" class="mono" font-size="11" fill="#0F172A">1000</text>
+  <text x="272" y="186" class="ui" font-size="8.5" fill="#475569">▲▼</text>
+
+  <text x="336" y="187" class="lbl">送出式:</text>
+  <rect x="344" y="171" width="236" height="23" class="inp" />
+  <text x="352" y="187" class="mono" font-size="10.2" fill="#0F172A">ST,+$RANDF:12.30,12.38$ g</text>
+
+  <rect x="592" y="176" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2" />
+  <text x="612" y="187" class="ui" font-size="11" fill="#0F172A">HEX</text>
+
+  <rect x="652" y="171" width="136" height="23" class="inp" />
+  <text x="660" y="187" class="mono" font-size="10.8" fill="#0F172A">None</text>
+  <text x="774" y="187" class="ui" font-size="9" fill="#475569">▼</text>
+
+  <!-- Row 1: シナリオ制御バー -->
+  <rect x="54" y="212" width="14" height="14" rx="2" fill="#0078D7" />
+  <path d="M 57 219 L 60 222 L 65 215" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+  <text x="74" y="223" class="ui" font-size="11" fill="#0F172A">シナリオ有効</text>
+
+  <rect x="162" y="212" width="14" height="14" rx="2" fill="#0078D7" />
+  <path d="M 165 219 L 168 222 L 173 215" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+  <text x="182" y="223" class="ui" font-size="11" fill="#0F172A">ループ</text>
+
+  <rect x="234" y="206" width="76" height="24" class="btn" />
+  <text x="272" y="222" class="ui" font-size="10.5" fill="#1E293B" text-anchor="middle">+ 工程追加</text>
+
+  <rect x="316" y="206" width="76" height="24" class="btn" />
+  <text x="354" y="222" class="ui" font-size="10.5" fill="#1E293B" text-anchor="middle">- 工程削除</text>
+
+  <!-- シナリオステップ一覧グリッド (全6列: # / 受信トリガ / 遅延ms / 応答ペイロード / HEX / 備考メモ) -->
+  <g transform="translate(52, 240)">
+    <rect x="0" y="0" width="796" height="248" fill="#FFFFFF" stroke="#64748B" stroke-width="1" />
+    <rect x="0" y="0" width="40" height="26" class="grid-hdr" />
+    <rect x="40" y="0" width="140" height="26" class="grid-hdr" />
+    <rect x="180" y="0" width="66" height="26" class="grid-hdr" />
+    <rect x="246" y="0" width="290" height="26" class="grid-hdr" />
+    <rect x="536" y="0" width="48" height="26" class="grid-hdr" />
+    <rect x="584" y="0" width="212" height="26" class="grid-hdr" />
+
+    <text x="20" y="17" class="grid-hdr-txt" text-anchor="middle">#</text>
+    <text x="48" y="17" class="grid-hdr-txt">受信トリガ</text>
+    <text x="213" y="17" class="grid-hdr-txt" text-anchor="middle">遅延ms</text>
+    <text x="254" y="17" class="grid-hdr-txt">応答ペイロード</text>
+    <text x="560" y="17" class="grid-hdr-txt" text-anchor="middle">HEX</text>
+    <text x="592" y="17" class="grid-hdr-txt">備考メモ</text>
+
+    <!-- Step 1 -->
+    <g transform="translate(0, 26)">
+      <rect x="0" y="0" width="796" height="28" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+      <text x="20" y="18" class="mono" font-size="10.5" fill="#0F172A" text-anchor="middle">1</text>
+      <text x="48" y="18" class="mono" font-size="10.5" fill="#0F172A">START</text>
+      <text x="213" y="18" class="mono" font-size="10.5" fill="#0F172A" text-anchor="middle">50</text>
+      <text x="254" y="18" class="mono" font-size="10.5" fill="#0F172A">READY,OK</text>
+      <rect x="553" y="7" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#64748B" stroke-width="1.1" />
+      <text x="592" y="18" class="ui" font-size="10.2" fill="#475569">開始要求を受理し応答</text>
+    </g>
+
+    <!-- Step 2 -->
+    <g transform="translate(0, 54)">
+      <rect x="0" y="0" width="796" height="28" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+      <text x="20" y="18" class="mono" font-size="10.5" fill="#0F172A" text-anchor="middle">2</text>
+      <text x="48" y="18" class="ui" font-size="10" fill="#94A3B8">(空欄: 自動進行)</text>
+      <text x="213" y="18" class="mono" font-size="10.5" fill="#0F172A" text-anchor="middle">500</text>
+      <text x="254" y="18" class="mono" font-size="10.5" fill="#0F172A">BUSY,PROGRESS=50%</text>
+      <rect x="553" y="7" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#64748B" stroke-width="1.1" />
+      <text x="592" y="18" class="ui" font-size="10.2" fill="#475569">500ms後に経過通知</text>
+    </g>
+
+    <!-- Step 3 -->
+    <g transform="translate(0, 82)">
+      <rect x="0" y="0" width="796" height="28" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+      <text x="20" y="18" class="mono" font-size="10.5" fill="#0F172A" text-anchor="middle">3</text>
+      <text x="48" y="18" class="ui" font-size="10" fill="#94A3B8">(空欄: 自動進行)</text>
+      <text x="213" y="18" class="mono" font-size="10.5" fill="#0F172A" text-anchor="middle">1000</text>
+      <text x="254" y="18" class="mono" font-size="10.5" fill="#0F172A">DONE,VAL=$RANDF:9.95,10.05$</text>
+      <rect x="553" y="7" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#64748B" stroke-width="1.1" />
+      <text x="592" y="18" class="ui" font-size="10.2" fill="#475569">計測完了＋測定値通知</text>
+    </g>
+  </g>
+
+  <!-- 下部ボタンバー -->
+  <text x="32" y="546" class="mono" font-size="9.8" fill="#475569">実装配置: tool/TermEmulator/Forms/EmulatorChannelDialog.cs (_tabPeriodic / _grpPeriodic) + Simulation/PeriodicScenarioEmitter.cs</text>
+  <rect x="676" y="526" width="92" height="28" rx="4" fill="#FFFFFF" stroke="#0078D7" stroke-width="1.5" />
+  <text x="722" y="544" class="ui" font-size="11.5" font-weight="700" fill="#0F172A" text-anchor="middle">OK</text>
+  <rect x="776" y="526" width="92" height="28" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.1" />
+  <text x="822" y="544" class="ui" font-size="11.5" fill="#1E293B" text-anchor="middle">キャンセル</text>
+  </g>
+</svg>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="615" viewBox="0 0 900 615">
+  <defs>
+    <filter id="dlgShadow" x="-3%" y="-3%" width="106%" height="108%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#0F172A" flood-opacity="0.16" />
+    </filter>
+    <style>
+      .ui { font-family: 'Yu Gothic UI', 'Meiryo UI', 'Segoe UI', sans-serif; }
+      .mono { font-family: 'Consolas', 'BIZ UDGothic', 'MS Gothic', monospace; }
+      .lbl { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11px; font-weight: 600; fill: #1E293B; text-anchor: end; }
+      .inp { fill: #FFFFFF; stroke: #94A3B8; stroke-width: 1.1; rx: 2; }
+      .grp { fill: #F8FAFC; stroke: #CBD5E1; stroke-width: 1.1; rx: 4; }
+      .grp-hdr { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11px; font-weight: 700; fill: #0F172A; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="615" fill="#F1F5F9" rx="10" />
+  <text x="20" y="24" class="ui" font-size="13.5" font-weight="700" fill="#0F172A">図 4-B : [異常注入] 基本タブ画面（4行固定グリッド整列 : EmulatorChannelDialog）</text>
+
+  <!-- ダイアログ外枠 -->
+  <g filter="url(#dlgShadow)">
+    <rect x="20" y="36" width="860" height="560" rx="7" fill="#F0F0F0" stroke="#94A3B8" stroke-width="1.4" />
+    <path d="M 20 43 Q 20 36 27 36 L 873 36 Q 880 36 880 43 L 880 68 L 20 68 Z" fill="#FFFFFF" />
+    <line x1="20" y1="68" x2="880" y2="68" stroke="#E2E8F0" stroke-width="1" />
+  </g>
+
+  <!-- タイトルバー -->
+  <rect x="32" y="44" width="16" height="16" rx="3" fill="#0F766E" />
+  <text x="40" y="56" class="mono" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">TE</text>
+  <text x="56" y="57" class="ui" font-size="12" font-weight="600" fill="#0F172A">チャネル詳細設定 - Monaca TermEmulator</text>
+  <g stroke="#475569" stroke-width="1.3" fill="none">
+    <line x1="794" y1="53" x2="806" y2="53" />
+    <rect x="822" y="47" width="11" height="10" />
+    <line x1="850" y1="47" x2="861" y2="58" />
+    <line x1="861" y1="47" x2="850" y2="58" />
+  </g>
+
+  <!-- 上部共通ヘッダバー（2行整列） -->
+  <rect x="21" y="69" width="858" height="66" fill="#F0F0F0" />
+  <!-- Row 0 -->
+  <text x="92" y="92" class="lbl">チャネル名:</text>
+  <rect x="98" y="76" width="225" height="23" class="inp" />
+  <text x="106" y="92" class="ui" font-size="11" fill="#0F172A">SCPI Virtual DMM</text>
+
+  <text x="410" y="92" class="lbl">動作モード:</text>
+  <rect x="416" y="76" width="250" height="23" class="inp" />
+  <text x="424" y="92" class="ui" font-size="11" fill="#0F172A">TCP サーバー仮想機器</text>
+  <text x="652" y="92" class="ui" font-size="10" fill="#475569">▼</text>
+
+  <!-- Row 1 -->
+  <text x="92" y="121" class="lbl">プロトコル:</text>
+  <rect x="98" y="105" width="225" height="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.2" rx="2" />
+  <text x="106" y="121" class="ui" font-size="11" font-weight="600" fill="#1D4ED8">なし (汎用応答ルールのみ)</text>
+  <text x="309" y="121" class="ui" font-size="10" fill="#1D4ED8">▼</text>
+
+  <rect x="352" y="110" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2" />
+  <text x="372" y="121" class="ui" font-size="11" fill="#0F172A">自動開始</text>
+
+  <rect x="444" y="110" width="14" height="14" rx="2" fill="#0078D7" />
+  <path d="M 447 117 L 450 120 L 455 113" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+  <text x="464" y="121" class="ui" font-size="11" fill="#0F172A">全チャネル共有メモリ</text>
+
+  <!-- タブストリップ (基本4タブ: 異常注入[選択] ＋ プロトコル連動タブ枠) -->
+  <g transform="translate(0, 28)">
+  <path d="M 28 136 L 28 116 Q 28 113 31 113 L 136 113 Q 139 113 139 116 L 139 136 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="83.5" y="128" class="ui" font-size="10.2" fill="#334155" text-anchor="middle">接続・フレーミング</text>
+
+  <path d="M 141 136 L 141 116 Q 141 113 144 113 L 234 113 Q 237 113 237 116 L 237 136 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="189" y="128" class="ui" font-size="10.2" fill="#334155" text-anchor="middle">自動応答ルール</text>
+
+  <path d="M 239 136 L 239 114 Q 239 111 242 111 L 306 111 Q 309 111 309 114 L 309 136 Z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2" />
+  <text x="274" y="128" class="ui" font-size="10.8" font-weight="700" fill="#0F172A" text-anchor="middle">異常注入</text>
+
+  <path d="M 311 136 L 311 116 Q 311 113 314 113 L 368 113 Q 371 113 371 116 L 371 136 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="341" y="128" class="ui" font-size="10.2" fill="#334155" text-anchor="middle">定周期</text>
+
+  <rect x="378" y="114" width="290" height="20" rx="3" fill="#EFF6FF" stroke="#93C5FD" stroke-dasharray="3,2" stroke-width="1" />
+  <text x="523" y="128" class="ui" font-size="9.8" fill="#1D4ED8" text-anchor="middle">※ 上部「プロトコル」選択時に対象専用タブが1つ追加表示</text>
+
+  <!-- タブページコンテナ -->
+  <rect x="26" y="135" width="848" height="380" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2" />
+  <line x1="240" y1="135" x2="308" y2="135" stroke="#FFFFFF" stroke-width="2" />
+
+  <!-- 異常系注入 GroupBox (4行固定 TableLayoutPanel 整列) -->
+  <rect x="40" y="152" width="820" height="176" class="grp" />
+  <rect x="52" y="143" width="386" height="16" fill="#FFFFFF" />
+  <text x="56" y="155" class="grp-hdr">異常系注入（ジッタ遅延・細切れ分割送信・無応答ドロップ・CRC/ビット破損）</text>
+
+  <!-- Row 0: 有効化 / 対象 / 遅延 / 揺らぎ -->
+  <rect x="54" y="176" width="14" height="14" rx="2" fill="#0078D7" />
+  <path d="M 57 183 L 60 186 L 65 179" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+  <text x="74" y="187" class="ui" font-size="11" fill="#0F172A">異常系注入を有効化</text>
+
+  <text x="344" y="187" class="lbl">対象:</text>
+  <rect x="352" y="171" width="104" height="23" class="inp" />
+  <text x="360" y="187" class="mono" font-size="11" fill="#0F172A">TxOnly</text>
+  <text x="442" y="187" class="ui" font-size="9" fill="#475569">▼</text>
+
+  <text x="536" y="187" class="lbl">遅延(ms):</text>
+  <rect x="544" y="171" width="76" height="23" class="inp" />
+  <text x="552" y="187" class="mono" font-size="11" fill="#0F172A">50</text>
+  <text x="606" y="186" class="ui" font-size="8.5" fill="#475569">▲▼</text>
+
+  <text x="708" y="187" class="lbl">揺らぎ(ms):</text>
+  <rect x="716" y="171" width="76" height="23" class="inp" />
+  <text x="724" y="187" class="mono" font-size="11" fill="#0F172A">30</text>
+  <text x="778" y="186" class="ui" font-size="8.5" fill="#475569">▲▼</text>
+
+  <!-- Row 1: 分割送信 / 分割長 / 間隔 / 瞬断周期 -->
+  <rect x="54" y="212" width="14" height="14" rx="2" fill="#0078D7" />
+  <path d="M 57 219 L 60 222 L 65 215" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+  <text x="74" y="223" class="ui" font-size="11" fill="#0F172A">分割送信</text>
+
+  <text x="344" y="223" class="lbl">分割長(B):</text>
+  <rect x="352" y="207" width="76" height="23" class="inp" />
+  <text x="360" y="223" class="mono" font-size="11" fill="#0F172A">3</text>
+  <text x="414" y="222" class="ui" font-size="8.5" fill="#475569">▲▼</text>
+
+  <text x="536" y="223" class="lbl">間隔(ms):</text>
+  <rect x="544" y="207" width="76" height="23" class="inp" />
+  <text x="552" y="223" class="mono" font-size="11" fill="#0F172A">15</text>
+  <text x="606" y="222" class="ui" font-size="8.5" fill="#475569">▲▼</text>
+
+  <text x="708" y="223" class="lbl">瞬断周期:</text>
+  <rect x="716" y="207" width="76" height="23" class="inp" />
+  <text x="724" y="223" class="mono" font-size="11" fill="#0F172A">0</text>
+  <text x="778" y="222" class="ui" font-size="8.5" fill="#475569">▲▼</text>
+
+  <!-- Row 2: 破棄条件 -->
+  <text x="110" y="259" class="lbl">破棄条件:</text>
+  <rect x="118" y="243" width="136" height="23" class="inp" />
+  <text x="126" y="259" class="mono" font-size="10.8" fill="#0F172A">EveryNPackets</text>
+  <text x="240" y="259" class="ui" font-size="9" fill="#475569">▼</text>
+
+  <rect x="268" y="243" width="76" height="23" class="inp" />
+  <text x="276" y="259" class="mono" font-size="11" fill="#0F172A">10</text>
+  <text x="330" y="258" class="ui" font-size="8.5" fill="#475569">▲▼</text>
+
+  <!-- Row 3: 破損条件 -->
+  <text x="110" y="295" class="lbl">破損条件:</text>
+  <rect x="118" y="279" width="136" height="23" class="inp" />
+  <text x="126" y="295" class="mono" font-size="10.8" fill="#0F172A">ProbabilityPercent</text>
+  <text x="240" y="295" class="ui" font-size="9" fill="#475569">▼</text>
+
+  <rect x="268" y="279" width="156" height="23" class="inp" />
+  <text x="276" y="295" class="mono" font-size="10.8" fill="#0F172A">InvertLastTwoBytes</text>
+  <text x="410" y="295" class="ui" font-size="9" fill="#475569">▼</text>
+
+  <rect x="462" y="279" width="76" height="23" class="inp" />
+  <text x="470" y="295" class="mono" font-size="11" fill="#0F172A">5</text>
+  <text x="524" y="294" class="ui" font-size="8.5" fill="#475569">▲▼</text>
+
+  <!-- 下部ボタンバー -->
+  <text x="32" y="546" class="mono" font-size="9.8" fill="#475569">実装配置: tool/TermEmulator/Forms/EmulatorChannelDialog.cs (_tabFault / _grpFault) + Simulation/FaultInjectionProcessor.cs</text>
+  <rect x="676" y="526" width="92" height="28" rx="4" fill="#FFFFFF" stroke="#0078D7" stroke-width="1.5" />
+  <text x="722" y="544" class="ui" font-size="11.5" font-weight="700" fill="#0F172A" text-anchor="middle">OK</text>
+  <rect x="776" y="526" width="92" height="28" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.1" />
+  <text x="822" y="544" class="ui" font-size="11.5" fill="#1E293B" text-anchor="middle">キャンセル</text>
+  </g>
+</svg>

@@ -1,229 +1,213 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="980" height="590" viewBox="0 0 980 590">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="625" viewBox="0 0 900 625">
   <defs>
-    <filter id="dlgShadow" x="-3%" y="-3%" width="108%" height="110%">
-      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.18" />
+    <filter id="dlgShadow" x="-3%" y="-3%" width="106%" height="108%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#0F172A" flood-opacity="0.16" />
     </filter>
-    <linearGradient id="dlgTitle" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#0F766E" />
-      <stop offset="100%" stop-color="#0284C7" />
-    </linearGradient>
-    <linearGradient id="proxyTitle" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#4C1D95" />
-      <stop offset="100%" stop-color="#6D28D9" />
-    </linearGradient>
     <style>
       .ui { font-family: 'Yu Gothic UI', 'Meiryo UI', 'Segoe UI', sans-serif; }
       .mono { font-family: 'Consolas', 'BIZ UDGothic', 'MS Gothic', monospace; }
-      .badge-circle { fill: #E8590C; stroke: #FFFFFF; stroke-width: 2; }
-      .badge-num { font-family: 'Segoe UI', 'Yu Gothic UI', sans-serif; font-size: 12px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; dominant-baseline: central; }
-      .lbl { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11px; font-weight: 600; fill: #1E293B; }
-      .input-box { fill: #FFFFFF; stroke: #94A3B8; stroke-width: 1.2; rx: 3; }
-      .grid-hdr { fill: #F1F5F9; stroke: #CBD5E1; stroke-width: 1; }
-      .grid-hdr-txt { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11px; font-weight: 700; fill: #1E293B; }
+      .lbl { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11px; font-weight: 600; fill: #1E293B; text-anchor: end; }
+      .lbl-dis { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11px; font-weight: 600; fill: #94A3B8; text-anchor: end; }
+      .inp { fill: #FFFFFF; stroke: #94A3B8; stroke-width: 1.1; rx: 2; }
+      .inp-dis { fill: #F1F5F9; stroke: #CBD5E1; stroke-width: 1; rx: 2; }
+      .grp { fill: #F8FAFC; stroke: #CBD5E1; stroke-width: 1.1; rx: 4; }
+      .grp-hdr { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11px; font-weight: 700; fill: #0F172A; }
+      .grp-hdr-dis { font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; font-size: 11px; font-weight: 700; fill: #94A3B8; }
     </style>
   </defs>
 
   <!-- 背景 -->
-  <rect x="0" y="0" width="980" height="590" fill="#F8FAFC" rx="10" />
-  <text x="24" y="26" class="ui" font-size="14" font-weight="700" fill="#0F172A">図 4 : チャネル設定画面（基本3タブ ＋ ライセンス連動プロトコル別動的タブ ＋ 透過Proxy : EmulatorChannelDialog）</text>
+  <rect x="0" y="0" width="900" height="625" fill="#F1F5F9" rx="10" />
+  <text x="20" y="24" class="ui" font-size="13.5" font-weight="700" fill="#0F172A">図 4 : チャネル詳細設定画面（2行ヘッダ［プロトコル連動タブ制御］＆ 固定グリッド整列 : EmulatorChannelDialog）</text>
 
-  <!-- 左側メイン: EmulatorChannelDialog -->
+  <!-- ダイアログ外枠 -->
   <g filter="url(#dlgShadow)">
-    <rect x="20" y="42" width="606" height="526" rx="7" fill="#F3F4F6" stroke="#94A3B8" stroke-width="1.5" />
-    <path d="M 20 49 Q 20 42 27 42 L 619 42 Q 626 42 626 49 L 626 74 L 20 74 Z" fill="url(#dlgTitle)" />
-  </g>
-  <text x="36" y="63" class="ui" font-size="12.5" font-weight="700" fill="#FFFFFF">TermEmulator チャネル設定 - [E0: SCPI マルチメータ＆天秤] (可変サイズ・座標保存対応)</text>
-
-  <!-- 上部共通ヘッダ設定 -->
-  <rect x="32" y="84" width="582" height="82" rx="5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
-  <text x="44" y="106" class="lbl">チャネル名称:</text>
-  <rect x="122" y="91" width="166" height="24" class="input-box" />
-  <text x="130" y="107" class="ui" font-size="11" font-weight="700" fill="#0F172A">SCPI マルチメータ</text>
-
-  <text x="298" y="106" class="lbl">接続方式:</text>
-  <rect x="356" y="91" width="246" height="24" fill="#F0FDFA" stroke="#0D9488" stroke-width="1.3" rx="3" />
-  <text x="364" y="107" class="mono" font-size="10.5" font-weight="700" fill="#0F766E">OS標準COM / NamedPipe / TCP ▼</text>
-
-  <text x="44" y="142" class="lbl">エンドポイント:</text>
-  <rect x="122" y="127" width="166" height="24" class="input-box" />
-  <text x="130" y="143" class="mono" font-size="11" fill="#0F172A">COM3:9600,8,N,1</text>
-
-  <text x="298" y="142" class="lbl">終端:</text>
-  <rect x="332" y="127" width="94" height="24" class="input-box" />
-  <text x="340" y="143" class="mono" font-size="11" fill="#0F172A">CRLF (\r\n)</text>
-
-  <!-- プリセットテンプレート即時適用ボタン -->
-  <rect x="436" y="125" width="166" height="28" rx="4" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.3" />
-  <text x="519" y="143" class="ui" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">標準プリセット読込 ▼</text>
-
-  <!-- ① 基本3タブ ＋ ライセンス有効プロトコル別動的タブ -->
-  <circle cx="38" cy="186" r="10" class="badge-circle" />
-  <text x="38" y="186" class="badge-num">1</text>
-
-  <!-- 基本タブ1 (選択中) -->
-  <path d="M 52 204 L 52 180 Q 52 176 56 176 L 136 176 Q 140 176 140 180 L 140 204 Z" fill="#FFFFFF" stroke="#0D9488" stroke-width="1.5" />
-  <text x="96" y="194" class="ui" font-size="9.5" font-weight="700" fill="#0F766E" text-anchor="middle">汎用応答ルール</text>
-
-  <!-- 基本タブ2 -->
-  <path d="M 142 204 L 142 182 Q 142 178 146 178 L 216 178 Q 220 178 220 182 L 220 204 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
-  <text x="181" y="194" class="ui" font-size="9.3" font-weight="600" fill="#475569" text-anchor="middle">周期・シナリオ</text>
-
-  <!-- 基本タブ3 -->
-  <path d="M 222 204 L 222 182 Q 222 178 226 178 L 284 178 Q 288 178 288 182 L 288 204 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
-  <text x="255" y="194" class="ui" font-size="9.3" font-weight="600" fill="#475569" text-anchor="middle">異常エミュ</text>
-
-  <!-- 産業プロトコル別動的タブ群 (ライセンス有効分のみ表示: 全6種) -->
-  <path d="M 290 204 L 290 181 Q 290 177 294 177 L 340 177 Q 344 177 344 181 L 344 204 Z" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.2" />
-  <text x="317" y="194" class="ui" font-size="9.2" font-weight="700" fill="#1D4ED8" text-anchor="middle">Modbus</text>
-
-  <path d="M 346 204 L 346 181 Q 346 177 350 177 L 396 177 Q 400 177 400 181 L 400 204 Z" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.2" />
-  <text x="373" y="194" class="ui" font-size="9.2" font-weight="700" fill="#1D4ED8" text-anchor="middle">MELSEC</text>
-
-  <path d="M 402 204 L 402 181 Q 402 177 406 177 L 448 177 Q 452 177 452 181 L 452 204 Z" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.2" />
-  <text x="427" y="194" class="ui" font-size="9.2" font-weight="700" fill="#1D4ED8" text-anchor="middle">MC 3E</text>
-
-  <path d="M 454 204 L 454 181 Q 454 177 458 177 L 498 177 Q 502 177 502 181 L 502 204 Z" fill="#CCFBF1" stroke="#0D9488" stroke-width="1.2" />
-  <text x="478" y="194" class="ui" font-size="9.2" font-weight="700" fill="#0F766E" text-anchor="middle">Telnet</text>
-
-  <path d="M 504 204 L 504 181 Q 504 177 508 177 L 554 177 Q 558 177 558 181 L 558 204 Z" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.2" />
-  <text x="531" y="194" class="ui" font-size="9.2" font-weight="700" fill="#1D4ED8" text-anchor="middle">OMRON</text>
-
-  <path d="M 560 204 L 560 181 Q 560 177 564 177 L 610 177 Q 614 177 614 181 L 614 204 Z" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.2" />
-  <text x="587" y="194" class="ui" font-size="9.0" font-weight="700" fill="#1D4ED8" text-anchor="middle">KEYENCE</text>
-
-  <!-- サブタブコンテナ -->
-  <rect x="32" y="203" width="582" height="304" rx="3" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" />
-  <line x1="53" y1="203" x2="139" y2="203" stroke="#FFFFFF" stroke-width="2" />
-
-  <!-- ルール編集ツールバー -->
-  <rect x="44" y="214" width="78" height="24" rx="3" fill="#F0FDFA" stroke="#0D9488" stroke-width="1" />
-  <text x="83" y="230" class="ui" font-size="11" font-weight="700" fill="#0F766E" text-anchor="middle">＋ ルール追加</text>
-  <rect x="128" y="214" width="148" height="24" rx="3" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1" />
-  <text x="202" y="230" class="ui" font-size="10.5" font-weight="700" fill="#92400E" text-anchor="middle">プリセット: SCPI / 天秤 / AT / GPS</text>
-
-  <rect x="438" y="214" width="80" height="24" rx="3" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" />
-  <text x="478" y="230" class="ui" font-size="11" font-weight="600" fill="#1E293B" text-anchor="middle">CSV読込</text>
-  <rect x="524" y="214" width="78" height="24" rx="3" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" />
-  <text x="563" y="230" class="ui" font-size="11" font-weight="600" fill="#1E293B" text-anchor="middle">CSV出力</text>
-
-  <!-- ルールグリッド -->
-  <g transform="translate(44, 246)">
-    <rect x="0" y="0" width="558" height="168" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1" />
-    <rect x="0" y="0" width="38" height="26" class="grid-hdr" />
-    <rect x="38" y="0" width="92" height="26" class="grid-hdr" />
-    <rect x="130" y="0" width="142" height="26" class="grid-hdr" />
-    <rect x="272" y="0" width="224" height="26" class="grid-hdr" />
-    <rect x="496" y="0" width="62" height="26" class="grid-hdr" />
-
-    <text x="8" y="17" class="grid-hdr-txt">有効</text>
-    <text x="45" y="17" class="grid-hdr-txt">一致種別</text>
-    <text x="138" y="17" class="grid-hdr-txt">受信パターン</text>
-    <text x="280" y="17" class="grid-hdr-txt">応答テンプレート (マクロ・チェックサム可)</text>
-    <text x="504" y="17" class="grid-hdr-txt">遅延ms</text>
-
-    <!-- Rule 1: SCPI -->
-    <g transform="translate(0, 26)">
-      <rect x="0" y="0" width="558" height="34" fill="#F0FDFA" stroke="#CCFBF1" stroke-width="1" />
-      <text x="13" y="21" class="mono" font-size="11.5" fill="#15803D" font-weight="700">✓</text>
-      <text x="45" y="21" class="mono" font-size="11" fill="#0F766E" font-weight="700">ExactText</text>
-      <text x="138" y="21" class="mono" font-size="11.5" fill="#0F172A" font-weight="700">*IDN?</text>
-      <text x="280" y="21" class="mono" font-size="11" fill="#0F172A">MONACA,EMU-DMM,$SEQ:D4$,1.0\r\n</text>
-      <text x="516" y="21" class="mono" font-size="11.5" fill="#334155">5</text>
-    </g>
-    <!-- Rule 2: 電子天秤 Q -->
-    <g transform="translate(0, 60)">
-      <rect x="0" y="0" width="558" height="34" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
-      <text x="13" y="21" class="mono" font-size="11.5" fill="#15803D" font-weight="700">✓</text>
-      <text x="45" y="21" class="mono" font-size="11" fill="#0F766E">ExactText</text>
-      <text x="138" y="21" class="mono" font-size="11.5" fill="#0F172A">Q</text>
-      <text x="280" y="21" class="mono" font-size="11" fill="#0F172A">ST,+$RANDF(12.30,12.38,2)$ g\r\n</text>
-      <text x="512" y="21" class="mono" font-size="11.5" fill="#334155">20</text>
-    </g>
-    <!-- Rule 3: NMEA / XOR Checksum -->
-    <g transform="translate(0, 94)">
-      <rect x="0" y="0" width="558" height="34" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
-      <text x="13" y="21" class="mono" font-size="11.5" fill="#15803D" font-weight="700">✓</text>
-      <text x="45" y="21" class="mono" font-size="11" fill="#1D4ED8">RegexText</text>
-      <text x="138" y="21" class="mono" font-size="11" fill="#0F172A">^MEAS:CH(\d)\?$</text>
-      <text x="280" y="21" class="mono" font-size="11" fill="#0F172A">CH$CAP1$=+$RANDF(4.98,5.02,4)$V\r\n</text>
-      <text x="512" y="21" class="mono" font-size="11.5" fill="#334155">15</text>
-    </g>
-    <!-- Rule 4: HexWildcard -->
-    <g transform="translate(0, 128)">
-      <rect x="0" y="0" width="558" height="34" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
-      <text x="13" y="21" class="mono" font-size="11.5" fill="#15803D" font-weight="700">✓</text>
-      <text x="45" y="21" class="mono" font-size="11" fill="#6D28D9">HexWildcard</text>
-      <text x="138" y="21" class="mono" font-size="11" fill="#0F172A">02 30 31 ?? 03</text>
-      <text x="280" y="21" class="mono" font-size="11" fill="#6D28D9">[HEX] 06 30 31 4F 4B 03 $CRC16$</text>
-      <text x="512" y="21" class="mono" font-size="11.5" fill="#334155">10</text>
-    </g>
+    <rect x="20" y="36" width="860" height="570" rx="7" fill="#F0F0F0" stroke="#94A3B8" stroke-width="1.4" />
+    <path d="M 20 43 Q 20 36 27 36 L 873 36 Q 880 36 880 43 L 880 68 L 20 68 Z" fill="#FFFFFF" />
+    <line x1="20" y1="68" x2="880" y2="68" stroke="#E2E8F0" stroke-width="1" />
   </g>
 
-  <!-- ② テスト照合プレビューバー -->
-  <circle cx="54" cy="434" r="10" class="badge-circle" />
-  <text x="54" y="434" class="badge-num">2</text>
-  <rect x="44" y="450" width="558" height="44" rx="4" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" />
-  <text x="54" y="476" class="lbl">模擬受信テスト:</text>
-  <rect x="148" y="459" width="144" height="26" class="input-box" />
-  <text x="156" y="476" class="mono" font-size="11.5" fill="#0F172A">MEAS:CH2?</text>
-  <rect x="298" y="459" width="58" height="26" rx="3" fill="#0D9488" />
-  <text x="327" y="476" class="ui" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">照合</text>
-  <text x="366" y="476" class="mono" font-size="11.5" fill="#0F766E" font-weight="700">-&gt; CH2=+5.0031V\r\n</text>
-
-  <!-- ダイアログ下部ボタン ＆ 位置保存注記 -->
-  <text x="40" y="540" class="mono" font-size="9.8" fill="#475569">Point Key="EmulatorChannelDialog" (X,Y,W,H,DPI)</text>
-  <rect x="408" y="520" width="96" height="32" rx="4" fill="#0D9488" stroke="#0F766E" stroke-width="1.2" />
-  <text x="456" y="541" class="ui" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">保存 (OK)</text>
-  <rect x="514" y="520" width="96" height="32" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2" />
-  <text x="562" y="541" class="ui" font-size="12" font-weight="600" fill="#1E293B" text-anchor="middle">キャンセル</text>
-
-  <!-- 右上カード: プロトコル別タブ画面管理＆ライセンス表示制御 -->
-  <rect x="646" y="42" width="314" height="252" rx="7" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.4" />
-  <rect x="646" y="42" width="314" height="32" rx="7" fill="#EFF6FF" />
-  <text x="660" y="63" class="ui" font-size="11.8" font-weight="700" fill="#1E3A8A">③ プロトコル別タブ管理 ＆ ライセンス表示制御</text>
-
-  <text x="660" y="92" class="lbl">各 ExtAnalysis DLL の専用タブ (ライセンス有効時のみ表示):</text>
-  <rect x="660" y="99" width="286" height="133" rx="5" fill="#F8FAFC" stroke="#93C5FD" stroke-width="1.2" />
-  <text x="668" y="115" class="ui" font-size="9.7" font-weight="700" fill="#1D4ED8">・[Modbus]  (ucSlaveModbus)  : TermAddIn_Modbus</text>
-  <text x="668" y="131" class="ui" font-size="9.7" font-weight="700" fill="#1D4ED8">・[MELSEC]  (ucSlaveMelco)   : TermAddIn_Melco</text>
-  <text x="668" y="147" class="ui" font-size="9.7" font-weight="700" fill="#1D4ED8">・[MC 3E]   (ucSlaveMelcoMC) : TermAddIn_MelcoMC</text>
-  <text x="668" y="163" class="ui" font-size="9.7" font-weight="700" fill="#0F766E">・[Telnet]  (ucSlaveTelnet)  : TermAddIn_Telnet</text>
-  <text x="668" y="179" class="ui" font-size="9.7" font-weight="700" fill="#1D4ED8">・[OMRON]   (ucSlaveOmron)   : TermAddIn_Omron</text>
-  <text x="668" y="195" class="ui" font-size="9.7" font-weight="700" fill="#1D4ED8">・[KEYENCE] (ucSlaveKeyence) : TermAddIn_Keyence</text>
-  <line x1="668" y1="204" x2="938" y2="204" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3,2" />
-  <text x="668" y="220" class="ui" font-size="9.4" font-weight="700" fill="#B45309">・ライセンス未所持(評価期間外)/DLL未配置タブは自動非表示</text>
-
-  <rect x="660" y="238" width="286" height="44" rx="5" fill="#F0FDF4" stroke="#22C55E" stroke-width="1.2" />
-  <text x="670" y="255" class="ui" font-size="10.2" font-weight="700" fill="#15803D">✓ TermPropertiesForm 準拠の動的タブ可視性制御</text>
-  <text x="670" y="273" class="ui" font-size="9.8" fill="#166534">IsExtensionLicensed == true (評価期間内含む) のタブのみ表示</text>
-
-  <!-- 右下カード: 透過プロキシ＆シリアル⇔TCP変換ブリッジ -->
-  <g filter="url(#dlgShadow)">
-    <rect x="646" y="310" width="314" height="258" rx="7" fill="#F3F4F6" stroke="#94A3B8" stroke-width="1.4" />
-    <path d="M 646 317 Q 646 310 653 310 L 953 310 Q 960 310 960 317 L 960 340 L 646 340 Z" fill="url(#proxyTitle)" />
+  <!-- タイトルバー -->
+  <rect x="32" y="44" width="16" height="16" rx="3" fill="#0F766E" />
+  <text x="40" y="56" class="mono" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">TE</text>
+  <text x="56" y="57" class="ui" font-size="12" font-weight="600" fill="#0F172A">チャネル詳細設定 - Monaca TermEmulator</text>
+  <g stroke="#475569" stroke-width="1.3" fill="none">
+    <line x1="794" y1="53" x2="806" y2="53" />
+    <rect x="822" y="47" width="11" height="10" />
+    <line x1="850" y1="47" x2="861" y2="58" />
+    <line x1="861" y1="47" x2="850" y2="58" />
   </g>
-  <text x="660" y="330" class="ui" font-size="12" font-weight="700" fill="#FFFFFF">④ 透過プロキシ ＆ シリアル⇔TCP 変換ブリッジ</text>
 
-  <text x="660" y="364" class="lbl">プロキシ形態:</text>
-  <rect x="748" y="348" width="198" height="24" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.3" rx="3" />
-  <text x="756" y="364" class="ui" font-size="10.5" fill="#5B21B6" font-weight="700">Serial⇔TCP / TCP⇔TCP / COM⇔COM</text>
+  <!-- 上部共通ヘッダバー（2行整列） -->
+  <rect x="21" y="69" width="858" height="66" fill="#F0F0F0" />
+  <!-- Row 0 -->
+  <text x="92" y="92" class="lbl">チャネル名:</text>
+  <rect x="98" y="76" width="225" height="23" class="inp" />
+  <text x="106" y="92" class="ui" font-size="11" fill="#0F172A">SCPI Virtual DMM</text>
 
-  <text x="660" y="396" class="lbl">上位待受側 A:</text>
-  <rect x="748" y="380" width="198" height="24" class="input-box" />
-  <text x="756" y="396" class="mono" font-size="11" fill="#0F172A">TCP 0.0.0.0:4001</text>
+  <text x="410" y="92" class="lbl">動作モード:</text>
+  <rect x="416" y="76" width="250" height="23" class="inp" />
+  <text x="424" y="92" class="ui" font-size="11" fill="#0F172A">TCP サーバー仮想機器</text>
+  <text x="652" y="92" class="ui" font-size="10" fill="#475569">▼</text>
 
-  <text x="660" y="428" class="lbl">下位実機側 B:</text>
-  <rect x="748" y="412" width="198" height="24" class="input-box" />
-  <text x="756" y="428" class="mono" font-size="11" fill="#0F172A">COM3:115200,8,N,1</text>
+  <!-- Row 1 -->
+  <text x="92" y="121" class="lbl">プロトコル:</text>
+  <rect x="98" y="105" width="225" height="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.2" rx="2" />
+  <text x="106" y="121" class="ui" font-size="11" font-weight="600" fill="#1D4ED8">なし (汎用応答ルールのみ)</text>
+  <text x="309" y="121" class="ui" font-size="10" fill="#1D4ED8">▼</text>
 
-  <rect x="656" y="446" width="294" height="66" rx="5" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1.6" />
-  <circle cx="672" cy="463" r="9" class="badge-circle" />
-  <text x="672" y="463" class="badge-num">4</text>
-  <text x="687" y="467" class="ui" font-size="11" font-weight="700" fill="#92400E">インライン機能（実機前段デバッグ）:</text>
-  <text x="668" y="487" class="ui" font-size="10.5" font-weight="700" fill="#B45309">・異常注入 (遅延/分割/Drop/CRC破壊)</text>
-  <text x="668" y="504" class="ui" font-size="10.5" font-weight="700" fill="#5B21B6">・往復パケット記録 -&gt; 自動モックルール化</text>
+  <rect x="352" y="110" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#64748B" stroke-width="1.2" />
+  <text x="372" y="121" class="ui" font-size="11" fill="#0F172A">自動開始</text>
 
-  <text x="660" y="536" class="ui" font-size="10.5" fill="#334155">物理シリアル機器の LAN 公開（デバイスサーバー化）と</text>
-  <text x="660" y="552" class="ui" font-size="10.5" fill="#334155">スニファ監視・異常系テスト・自動モック抽出を同時実現</text>
+  <rect x="444" y="110" width="14" height="14" rx="2" fill="#0078D7" />
+  <path d="M 447 117 L 450 120 L 455 113" stroke="#FFFFFF" stroke-width="1.8" fill="none" />
+  <text x="464" y="121" class="ui" font-size="11" fill="#0F172A">全チャネル共有メモリ</text>
+
+  <!-- タブストリップ (選択中プロトコルに応じて専用タブを動的表示) -->
+  <g transform="translate(0, 28)">
+  <path d="M 28 136 L 28 114 Q 28 111 31 111 L 138 111 Q 141 111 141 114 L 141 136 Z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2" />
+  <text x="84.5" y="128" class="ui" font-size="10.8" font-weight="700" fill="#0F172A" text-anchor="middle">接続・フレーミング</text>
+
+  <path d="M 143 136 L 143 116 Q 143 113 146 113 L 236 113 Q 239 113 239 116 L 239 136 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="191" y="128" class="ui" font-size="10.5" fill="#334155" text-anchor="middle">自動応答ルール</text>
+
+  <!-- 基本タブ3: 異常注入 -->
+  <path d="M 241 136 L 241 116 Q 241 113 244 113 L 304 113 Q 307 113 307 116 L 307 136 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="274" y="128" class="ui" font-size="10.2" fill="#334155" text-anchor="middle">異常注入</text>
+
+  <!-- 基本タブ4: 定周期 -->
+  <path d="M 309 136 L 309 116 Q 309 113 312 113 L 368 113 Q 371 113 371 116 L 371 136 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="340" y="128" class="ui" font-size="10.2" fill="#334155" text-anchor="middle">定周期</text>
+
+  <!-- 動的プロトコルタブ枠（プロトコル選択時のみ1タブ出現） -->
+  <rect x="378" y="114" width="290" height="20" rx="3" fill="#EFF6FF" stroke="#93C5FD" stroke-dasharray="3,2" stroke-width="1" />
+  <text x="523" y="128" class="ui" font-size="9.8" fill="#1D4ED8" text-anchor="middle">※ 上部「プロトコル」選択時に対象専用タブが1つ追加表示</text>
+
+  <!-- タブページコンテナ -->
+  <rect x="26" y="135" width="848" height="390" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2" />
+  <line x1="29" y1="135" x2="140" y2="135" stroke="#FFFFFF" stroke-width="2" />
+
+  <!-- Group 1: エンドポイント A (3行×3ペア TableLayoutPanel 整列) -->
+  <rect x="40" y="150" width="820" height="122" class="grp" />
+  <rect x="52" y="142" width="276" height="15" fill="#FFFFFF" />
+  <text x="56" y="154" class="grp-hdr">エンドポイント A（仮想機器待受側 / プロキシ待受側）</text>
+
+  <!-- Row 0 -->
+  <text x="122" y="182" class="lbl">COM:</text>
+  <rect x="130" y="166" width="120" height="23" class="inp-dis" />
+  <text x="138" y="182" class="mono" font-size="11" fill="#94A3B8">COM10</text>
+  <text x="236" y="182" class="ui" font-size="9" fill="#94A3B8">▼</text>
+
+  <text x="336" y="182" class="lbl">速度:</text>
+  <rect x="344" y="166" width="120" height="23" class="inp-dis" />
+  <text x="352" y="182" class="mono" font-size="11" fill="#94A3B8">9600</text>
+  <text x="450" y="182" class="ui" font-size="9" fill="#94A3B8">▼</text>
+
+  <text x="556" y="182" class="lbl">ビット:</text>
+  <rect x="564" y="166" width="120" height="23" class="inp-dis" />
+  <text x="572" y="182" class="mono" font-size="11" fill="#94A3B8">8</text>
+  <text x="670" y="182" class="ui" font-size="9" fill="#94A3B8">▼</text>
+
+  <!-- Row 1 -->
+  <text x="122" y="216" class="lbl">パリティ:</text>
+  <rect x="130" y="200" width="120" height="23" class="inp-dis" />
+  <text x="138" y="216" class="mono" font-size="11" fill="#94A3B8">None</text>
+  <text x="236" y="216" class="ui" font-size="9" fill="#94A3B8">▼</text>
+
+  <text x="336" y="216" class="lbl">ストップ:</text>
+  <rect x="344" y="200" width="120" height="23" class="inp-dis" />
+  <text x="352" y="216" class="mono" font-size="11" fill="#94A3B8">One</text>
+  <text x="450" y="216" class="ui" font-size="9" fill="#94A3B8">▼</text>
+
+  <text x="556" y="216" class="lbl">制御:</text>
+  <rect x="564" y="200" width="120" height="23" class="inp-dis" />
+  <text x="572" y="216" class="mono" font-size="11" fill="#94A3B8">None</text>
+  <text x="670" y="216" class="ui" font-size="9" fill="#94A3B8">▼</text>
+
+  <!-- Row 2 -->
+  <text x="122" y="250" class="lbl">待受IP:</text>
+  <rect x="130" y="234" width="120" height="23" class="inp" />
+  <text x="138" y="250" class="mono" font-size="11" fill="#0F172A">127.0.0.1</text>
+
+  <text x="336" y="250" class="lbl">ポート:</text>
+  <rect x="344" y="234" width="120" height="23" class="inp" />
+  <text x="352" y="250" class="mono" font-size="11" fill="#0F172A">5025</text>
+  <text x="448" y="249" class="ui" font-size="8.5" fill="#475569">▲▼</text>
+
+  <text x="556" y="250" class="lbl">パイプ名:</text>
+  <rect x="564" y="234" width="180" height="23" class="inp-dis" />
+  <text x="572" y="250" class="mono" font-size="11" fill="#94A3B8">TermEmulatorPipe0</text>
+
+  <!-- Group 2: エンドポイント B (2行×2ペア TableLayoutPanel 整列) -->
+  <rect x="40" y="286" width="820" height="88" class="grp" />
+  <rect x="52" y="278" width="366" height="15" fill="#FFFFFF" />
+  <text x="56" y="290" class="grp-hdr-dis">エンドポイント B（TCPクライアント接続先 / 透過プロキシ実機転送先）</text>
+
+  <text x="122" y="318" class="lbl-dis">転送先ホスト:</text>
+  <rect x="130" y="302" width="160" height="23" class="inp-dis" />
+  <text x="138" y="318" class="mono" font-size="11" fill="#94A3B8">127.0.0.1</text>
+
+  <text x="378" y="318" class="lbl-dis">転送先ポート:</text>
+  <rect x="386" y="302" width="120" height="23" class="inp-dis" />
+  <text x="394" y="318" class="mono" font-size="11" fill="#94A3B8">5021</text>
+
+  <text x="122" y="352" class="lbl-dis">対向COM:</text>
+  <rect x="130" y="336" width="160" height="23" class="inp-dis" />
+  <text x="138" y="352" class="mono" font-size="11" fill="#94A3B8">COM11</text>
+  <text x="276" y="352" class="ui" font-size="9" fill="#94A3B8">▼</text>
+
+  <text x="378" y="352" class="lbl-dis">対向速度:</text>
+  <rect x="386" y="336" width="120" height="23" class="inp-dis" />
+  <text x="394" y="352" class="mono" font-size="11" fill="#94A3B8">9600</text>
+  <text x="492" y="352" class="ui" font-size="9" fill="#94A3B8">▼</text>
+
+  <!-- Group 3: フレーム区切り・文字コード・既定チェックサム (3行×3ペア TableLayoutPanel 整列) -->
+  <rect x="40" y="388" width="820" height="122" class="grp" />
+  <rect x="52" y="380" width="246" height="15" fill="#FFFFFF" />
+  <text x="56" y="392" class="grp-hdr">フレーム区切り・文字コード・既定チェックサム</text>
+
+  <!-- Row 0 -->
+  <text x="122" y="420" class="lbl">区切り:</text>
+  <rect x="130" y="404" width="130" height="23" class="inp" />
+  <text x="138" y="420" class="mono" font-size="11" fill="#0F172A">CrLf</text>
+  <text x="246" y="420" class="ui" font-size="9" fill="#475569">▼</text>
+
+  <text x="348" y="420" class="lbl">無通信(ms):</text>
+  <rect x="356" y="404" width="110" height="23" class="inp" />
+  <text x="364" y="420" class="mono" font-size="11" fill="#0F172A">20</text>
+  <text x="450" y="419" class="ui" font-size="8.5" fill="#475569">▲▼</text>
+
+  <text x="556" y="420" class="lbl">固定長(B):</text>
+  <rect x="564" y="404" width="110" height="23" class="inp" />
+  <text x="572" y="420" class="mono" font-size="11" fill="#0F172A">8</text>
+  <text x="658" y="419" class="ui" font-size="8.5" fill="#475569">▲▼</text>
+
+  <!-- Row 1 -->
+  <text x="122" y="454" class="lbl">区切りHEX:</text>
+  <rect x="130" y="438" width="130" height="23" class="inp" />
+  <text x="138" y="454" class="mono" font-size="11" fill="#0F172A">0D 0A</text>
+
+  <text x="348" y="454" class="lbl">文字コード:</text>
+  <rect x="356" y="438" width="110" height="23" class="inp" />
+  <text x="364" y="454" class="mono" font-size="11" fill="#0F172A">UTF-8</text>
+  <text x="452" y="454" class="ui" font-size="9" fill="#475569">▼</text>
+
+  <text x="556" y="454" class="lbl">終端記号:</text>
+  <rect x="564" y="438" width="110" height="23" class="inp" />
+  <text x="572" y="454" class="mono" font-size="11" fill="#0F172A">\r\n</text>
+
+  <!-- Row 2 -->
+  <text x="122" y="488" class="lbl">チェックサム:</text>
+  <rect x="130" y="472" width="160" height="23" class="inp" />
+  <text x="138" y="488" class="mono" font-size="11" fill="#0F172A">None</text>
+  <text x="276" y="488" class="ui" font-size="9" fill="#475569">▼</text>
+
+  <!-- 下部ボタンバー -->
+  <text x="32" y="556" class="mono" font-size="9.8" fill="#475569">TableLayoutPanel 固定グリッド整列（高 DPI / ウィンドウリサイズ時もラベルと入力欄が分離しません）</text>
+  <rect x="676" y="536" width="92" height="28" rx="4" fill="#FFFFFF" stroke="#0078D7" stroke-width="1.5" />
+  <text x="722" y="554" class="ui" font-size="11.5" font-weight="700" fill="#0F172A" text-anchor="middle">OK</text>
+  <rect x="776" y="536" width="92" height="28" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.1" />
+  <text x="822" y="554" class="ui" font-size="11.5" fill="#1E293B" text-anchor="middle">キャンセル</text>
+  </g>
 </svg>

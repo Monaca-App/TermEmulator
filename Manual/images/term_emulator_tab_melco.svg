@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="510" viewBox="0 0 880 510">
   <defs>
     <filter id="cardShadow" x="-2%" y="-2%" width="104%" height="106%">
@@ -22,46 +22,33 @@
   <rect x="644" y="9" width="212" height="22" rx="11" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1" />
   <text x="750" y="24" class="ui" font-size="10.2" font-weight="700" fill="#1D4ED8" text-anchor="middle">✓ TermAddIn_Melco.License 有効</text>
 
-  <!-- タブストリップ (MELSEC タブ選択状態) -->
+  <!-- タブストリップ (基本4タブ + 選択中の MELSEC タブのみ表示) -->
   <path d="M 28 66 L 28 44 Q 28 40 32 40 L 130 40 Q 134 40 134 44 L 134 66 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
-  <text x="81" y="57" class="ui" font-size="10.5" font-weight="600" fill="#475569" text-anchor="middle">汎用応答ルール</text>
+  <text x="81" y="57" class="ui" font-size="10.5" font-weight="600" fill="#475569" text-anchor="middle">接続・フレーミング</text>
 
   <path d="M 138 66 L 138 44 Q 138 40 142 40 L 232 40 Q 236 40 236 44 L 236 66 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
-  <text x="187" y="57" class="ui" font-size="10.5" font-weight="600" fill="#475569" text-anchor="middle">周期・シナリオ</text>
+  <text x="187" y="57" class="ui" font-size="10.5" font-weight="600" fill="#475569" text-anchor="middle">自動応答ルール</text>
 
-  <path d="M 240 66 L 240 44 Q 240 40 244 40 L 320 40 Q 324 40 324 44 L 324 66 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
-  <text x="282" y="57" class="ui" font-size="10.5" font-weight="600" fill="#475569" text-anchor="middle">異常エミュ</text>
+  <path d="M 240 66 L 240 44 Q 240 40 244 40 L 302 40 Q 306 40 306 44 L 306 66 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="273" y="57" class="ui" font-size="10.2" font-weight="600" fill="#475569" text-anchor="middle">異常注入</text>
 
-  <path d="M 330 66 L 330 44 Q 330 40 334 40 L 420 40 Q 424 40 424 44 L 424 66 Z" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1" />
-  <text x="377" y="57" class="ui" font-size="10.5" font-weight="600" fill="#1E40AF" text-anchor="middle">Modbus</text>
+  <path d="M 310 66 L 310 44 Q 310 40 314 40 L 366 40 Q 370 40 370 44 L 370 66 Z" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="1" />
+  <text x="340" y="57" class="ui" font-size="10.2" font-weight="600" fill="#475569" text-anchor="middle">定周期</text>
 
   <!-- アクティブタブ: [MELSEC] -->
-  <path d="M 428 67 L 428 39 Q 428 35 432 35 L 520 35 Q 524 35 524 39 L 524 67 Z" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.8" />
-  <text x="476" y="56" class="ui" font-size="11.5" font-weight="700" fill="#1D4ED8" text-anchor="middle">MELSEC</text>
-
-  <path d="M 528 66 L 528 44 Q 528 40 532 40 L 604 40 Q 608 40 608 44 L 608 66 Z" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1" />
-  <text x="568" y="57" class="ui" font-size="10.5" font-weight="600" fill="#1E40AF" text-anchor="middle">MC 3E</text>
-
-  <path d="M 612 66 L 612 44 Q 612 40 616 40 L 682 40 Q 686 40 686 44 L 686 66 Z" fill="#CCFBF1" stroke="#5EEAD4" stroke-width="1" />
-  <text x="649" y="57" class="ui" font-size="10.5" font-weight="600" fill="#0F766E" text-anchor="middle">Telnet</text>
-
-  <path d="M 690 66 L 690 44 Q 690 40 694 40 L 764 40 Q 768 40 768 44 L 768 66 Z" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1" />
-  <text x="729" y="57" class="ui" font-size="10.2" font-weight="600" fill="#1E40AF" text-anchor="middle">OMRON</text>
-
-  <path d="M 772 66 L 772 44 Q 772 40 776 40 L 848 40 Q 852 40 852 44 L 852 66 Z" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1" />
-  <text x="812" y="57" class="ui" font-size="10.0" font-weight="600" fill="#1E40AF" text-anchor="middle">KEYENCE</text>
+  <path d="M 374 67 L 374 39 Q 374 35 378 35 L 468 35 Q 472 35 472 39 L 472 67 Z" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.8" />
+  <text x="423" y="56" class="ui" font-size="11.5" font-weight="700" fill="#1D4ED8" text-anchor="middle">MELSEC</text>
+  <text x="484" y="56" class="sub" font-size="9.8">※ ヘッダ「プロトコル: MELSEC」選択時のみ表示</text>
 
   <!-- ucSlaveMelco 本体コンテナ -->
   <g filter="url(#cardShadow)">
     <rect x="24" y="66" width="832" height="420" rx="5" fill="#F8FAFC" stroke="#2563EB" stroke-width="1.5" />
   </g>
-  <line x1="429" y1="66" x2="523" y2="66" stroke="#F8FAFC" stroke-width="2.5" />
+  <line x1="375" y1="66" x2="471" y2="66" stroke="#F8FAFC" stroke-width="2.5" />
 
-  <!-- 上部有効化バー -->
+  <!-- 上部タイトルバー -->
   <rect x="38" y="80" width="804" height="38" rx="5" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.2" />
-  <rect x="52" y="91" width="16" height="16" rx="3" fill="#2563EB" />
-  <path d="M 55 99 L 58.5 102.5 L 65 95" stroke="#FFFFFF" stroke-width="2" fill="none" />
-  <text x="76" y="104" class="ui" font-size="11.5" font-weight="700" fill="#1E3A8A">このチャネルで 三菱電機 MELSEC 計算機リンク (形式1〜形式5) 仮想 PLC 応答を有効にする</text>
+  <text x="54" y="104" class="ui" font-size="11.5" font-weight="700" fill="#1E3A8A">三菱電機 MELSEC 計算機リンク (形式1〜形式5)</text>
 
   <rect x="612" y="85" width="218" height="28" rx="4" fill="#1D4ED8" />
   <text x="721" y="103" class="ui" font-size="10.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">仮想メモリ監視を開く (D/M/X/Y/W)</text>
